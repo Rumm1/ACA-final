@@ -333,6 +333,10 @@ function initInteractiveGallery() {
         !window.location.pathname.includes('index.html')) {
         return;
     }
+     if ($('#interactiveGallery').length > 0) {
+        return; 
+    }
+    
     
     const galleryHTML = `
         <section class="py-5">
@@ -426,7 +430,7 @@ window.openGalleryModal = function(itemId) {
         <div class="modal fade" id="galleryModal" tabindex="-1">
             <div class="modal-dialog modal-lg">
                 <div class="modal-content">
-                    <div class="modal-header">
+                   <div class="modal-header">
                         <h5 class="modal-title">${item.title}</h5>
                         <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
                     </div>
@@ -1222,4 +1226,5 @@ window.clearAllNotifications = function() {
         renderNotifications();
         showNotification('All notifications cleared', 'success');
     }
+
 };
