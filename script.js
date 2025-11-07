@@ -328,15 +328,17 @@ const galleryItems = [
 ];
 
 function initInteractiveGallery() {
+    // Проверка страницы
     if (!window.location.pathname.includes('home.html') && 
         window.location.pathname !== '/' && 
         !window.location.pathname.includes('index.html')) {
         return;
     }
-     if ($('#interactiveGallery').length > 0) {
+    
+    // Проверка на существование галереи
+    if ($('#interactiveGallery').length > 0) {
         return; 
     }
-    
     
     const galleryHTML = `
         <section class="py-5">
@@ -360,11 +362,14 @@ function initInteractiveGallery() {
         </section>
     `;
     
-    const $carouselSection = $('.bg-light');
+    // ИСПРАВЛЕНИЕ: добавляем .first() чтобы взять только ПЕРВЫЙ элемент
+    const $carouselSection = $('.bg-light').first();
+    
     if ($carouselSection.length) {
         $carouselSection.after(galleryHTML);
         renderGallery();
         
+        // Обработчик кнопки Shuffle
         $('#shuffleGallery').on('click', function() {
             const shuffled = [...galleryItems].sort(() => Math.random() - 0.5);
             renderGallery(shuffled);
@@ -372,6 +377,7 @@ function initInteractiveGallery() {
             showNotification('Gallery shuffled! 🔀', 'info');
         });
         
+        // Обработчики фильтров
         $('[data-filter]').on('click', function() {
             const $button = $(this);
             const filter = $button.data('filter');
@@ -392,6 +398,7 @@ function initInteractiveGallery() {
     }
 }
 
+// Остальной код без изменений
 function renderGallery(items = galleryItems) {
     const $galleryContainer = $('#interactiveGallery');
     if (!$galleryContainer.length) return;
@@ -430,7 +437,7 @@ window.openGalleryModal = function(itemId) {
         <div class="modal fade" id="galleryModal" tabindex="-1">
             <div class="modal-dialog modal-lg">
                 <div class="modal-content">
-                   <div class="modal-header">
+                    <div class="modal-header">
                         <h5 class="modal-title">${item.title}</h5>
                         <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
                     </div>
@@ -1228,3 +1235,4 @@ window.clearAllNotifications = function() {
     }
 
 };
+
