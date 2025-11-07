@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>American Sports - American Cultural Association</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/sports.css">
+</head>
+<body>
+    <div id="scrollProgressBar" class="scroll-progress-bar"></div>
+    
+    <nav class="navbar navbar-expand-lg navbar-dark navbar-custom sticky-top">
+        <div class="container">
+            <a class="navbar-brand-custom" href="home.html">
+                <img class="aca-logo-img" src="images/logoACA.webp" alt="ACA Logo">
+                <div>
+                    <h1 class="mb-0">American Cultural</h1>
+                    <p class="mb-0 opacity-8">Association</p>
+                </div>
+            </a>
+            
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                    <li tabindex="0" class="nav-item"><a class="nav-link nav-link-custom" href="home.html">Home</a></li>
+                    <li tabindex="0" class="nav-item"><a class="nav-link nav-link-custom" href="cuisine.html">Cuisine</a></li>
+                    <li tabindex="0" class="nav-item"><a class="nav-link nav-link-custom" href="music.html">Music</a></li>
+                    <li tabindex="0" class="nav-item"><a class="nav-link nav-link-custom" href="movies.html">Movies</a></li>
+                    <li tabindex="0" class="nav-item"><a class="nav-link nav-link-custom active" href="sports.html">Sports</a></li>
+                    <li tabindex="0" class="nav-item"><a class="nav-link nav-link-custom" href="landmarks.html">Landmarks</a></li>
+                    <li tabindex="0" class="nav-item"><a class="nav-link nav-link-custom" href="holidays.html">Holidays</a></li>
+                    <li tabindex="0" class="nav-item"><a class="nav-link nav-link-custom" href="contact.html">Contact</a></li>
+                </ul>
+                <img src="images/logoAITU.jpg" alt="University Logo" class="aca-university-logo ms-3">
+                <button id="notificationBell" class="btn notification-bell-btn position-relative">
+                    <i class="fas fa-bell"></i>
+                    <span id="notificationCount" class="notification-badge">0</span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <section class="aca-hero-sport">
+        <div class="container">
+            <div class="aca-hero-content fade-in">
+                <h2>American Sports Culture</h2>
+                <p>Discover the passion and excitement of America's favorite pastimes</p>
+                <div id="timeGreeting" class="aca-greeting fade-in" style="font-size: 1.4rem; margin: 10px 0;"></div>
+                <div id="date-time-block" style="font-size: 1.2rem; font-weight: 500; margin-top: 20px;"></div>
+            </div>
+        </div>
+    </section>
+
+    <main>
+        <!-- Sports Intro Section -->
+        <section class="aca-sports-intro py-5">
+            <div class="container">
+                <div class="aca-sports-intro-content fade-in">
+                    <h3 class="aca-section-title">The Spirit of American Sports</h3>
+                    <p>Sports are deeply embedded in American culture, serving as a unifying force that brings communities together. From Friday night high school football games to the Super Bowl, sports create shared experiences and national pride.</p>
+                    <p>The United States has developed unique sports traditions and leagues that have become major cultural exports and billion-dollar industries.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Popular Sports Section -->
+        <section class="aca-popular-sports py-5 bg-light">
+            <div class="container">
+                <h3 class="aca-section-title fade-in">Most Popular Sports in USA</h3>
+                <div class="aca-sports-grid">
+                    <!-- American Football -->
+                    <div class="aca-sport-card fade-in">
+                        <div class="aca-sport-image">
+                            <img src="images/football.jpg" alt="American Football" class="card-img-top card-img-custom">
+                            <div class="aca-sport-overlay">
+                                <span class="aca-sport-badge">#1 Sport</span>
+                            </div>
+                        </div>
+                        <div class="aca-sport-content">
+                            <h4 class="card-title-custom">American Football</h4>
+                            <p class="card-text-custom">The most popular sport in the US, known for the NFL and the Super Bowl - the biggest sporting event in America that attracts over 100 million viewers annually.</p>
+                            <div class="aca-sport-facts">
+                                <h5>Key Facts:</h5>
+                                <ul>
+                                    <li><strong>League:</strong> NFL (National Football League)</li>
+                                    <li><strong>Season:</strong> September to February</li>
+                                    <li><strong>Major Event:</strong> Super Bowl (February)</li>
+                                    <li><strong>Famous Teams:</strong> New England Patriots, Dallas Cowboys</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Basketball -->
+                    <div class="aca-sport-card fade-in">
+                        <div class="aca-sport-image">
+                            <img src="images/basketball.jpg" alt="Basketball" class="card-img-top card-img-custom">
+                            <div class="aca-sport-overlay">
+                                <span class="aca-sport-badge">Invented in USA</span>
+                            </div>
+                        </div>
+                        <div class="aca-sport-content">
+                            <h4 class="card-title-custom">Basketball</h4>
+                            <p class="card-text-custom">Invented in Springfield, Massachusetts in 1891, basketball is hugely popular with the NBA being the premier league worldwide and a major cultural export.</p>
+                            <div class="aca-sport-facts">
+                                <h5>Key Facts:</h5>
+                                <ul>
+                                    <li><strong>League:</strong> NBA (National Basketball Association)</li>
+                                    <li><strong>Season:</strong> October to June</li>
+                                    <li><strong>Major Event:</strong> NBA Finals (June)</li>
+                                    <li><strong>Famous Players:</strong> Michael Jordan, LeBron James</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Baseball -->
+                    <div class="aca-sport-card fade-in">
+                        <div class="aca-sport-image">
+                            <img src="images/baseball.jpg" alt="Baseball" class="card-img-top card-img-custom">
+                            <div class="aca-sport-overlay">
+                                <span class="aca-sport-badge">America's Pastime</span>
+                            </div>
+                        </div>
+                        <div class="aca-sport-content">
+                            <h4 class="card-title-custom">Baseball</h4>
+                            <p class="card-text-custom">Known as "America's pastime," baseball has been popular for over a century and is deeply woven into the fabric of American summer culture.</p>
+                            <div class="aca-sport-facts">
+                                <h5>Key Facts:</h5>
+                                <ul>
+                                    <li><strong>League:</strong> MLB (Major League Baseball)</li>
+                                    <li><strong>Season:</strong> April to October</li>
+                                    <li><strong>Major Event:</strong> World Series (October)</li>
+                                    <li><strong>Famous Teams:</strong> New York Yankees, Boston Red Sox</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Ice Hockey -->
+                    <div class="aca-sport-card fade-in">
+                        <div class="aca-sport-image">
+                            <img src="images/hockey.jpg" alt="Ice Hockey" class="card-img-top card-img-custom">
+                            <div class="aca-sport-overlay">
+                                <span class="aca-sport-badge">Fast & Physical</span>
+                            </div>
+                        </div>
+                        <div class="aca-sport-content">
+                            <h4 class="card-title-custom">Ice Hockey</h4>
+                            <p class="card-text-custom">Popular in northern states and major cities, known for its fast pace, physical play, and passionate fan bases, especially during the Stanley Cup playoffs.</p>
+                            <div class="aca-sport-facts">
+                                <h5>Key Facts:</h5>
+                                <ul>
+                                    <li><strong>League:</strong> NHL (National Hockey League)</li>
+                                    <li><strong>Season:</strong> October to June</li>
+                                    <li><strong>Major Event:</strong> Stanley Cup Finals (June)</li>
+                                    <li><strong>Famous Teams:</strong> Chicago Blackhawks, Boston Bruins</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- College Sports Section -->
+        <section class="aca-college-sports py-5">
+            <div class="container">
+                <h3 class="aca-section-title fade-in">College Sports Phenomenon</h3>
+                <p class="aca-section-subtitle">College sports are extremely popular in the USA, with many universities having huge stadiums and passionate fan bases that rival professional teams.</p>
+                
+                <div class="aca-college-grid">
+                    <div class="aca-college-card fade-in">
+                        <div class="aca-college-icon">
+                            <i class="fas fa-football-ball"></i>
+                        </div>
+                        <h4 class="card-title-custom">NCAA Football</h4>
+                        <p class="card-text-custom">College football games often attract over 100,000 fans to massive stadiums. The rivalry games and bowl season create incredible excitement across the nation.</p>
+                        <div class="aca-college-stats">
+                            <div class="aca-college-stat">
+                                <span class="aca-stat-number">100K+</span>
+                                <span class="aca-stat-label">Fans per Game</span>
+                            </div>
+                            <div class="aca-college-stat">
+                                <span class="aca-stat-number">40+</span>
+                                <span class="aca-stat-label">Bowl Games</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="aca-college-card fade-in">
+                        <div class="aca-college-icon">
+                            <i class="fas fa-basketball-ball"></i>
+                        </div>
+                        <h4 class="card-title-custom">March Madness</h4>
+                        <p class="card-text-custom">The NCAA basketball tournament is one of the most exciting sporting events, featuring 68 teams in a single-elimination bracket that captivates the nation for three weeks.</p>
+                        <div class="aca-college-stats">
+                            <div class="aca-college-stat">
+                                <span class="aca-stat-number">68</span>
+                                <span class="aca-stat-label">Teams</span>
+                            </div>
+                            <div class="aca-college-stat">
+                                <span class="aca-stat-number">$8.8B</span>
+                                <span class="aca-stat-label">TV Rights</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="aca-college-card fade-in">
+                        <div class="aca-college-icon">
+                            <i class="fas fa-graduation-cap"></i>
+                        </div>
+                        <h4 class="card-title-custom">Student Athletes</h4>
+                        <p class="card-text-custom">Over 480,000 student-athletes compete in NCAA sports while pursuing their education, representing the balance of academics and athletics in American universities.</p>
+                        <div class="aca-college-stats">
+                            <div class="aca-college-stat">
+                                <span class="aca-stat-number">480K+</span>
+                                <span class="aca-stat-label">Athletes</span>
+                            </div>
+                            <div class="aca-college-stat">
+                                <span class="aca-stat-number">1,100</span>
+                                <span class="aca-stat-label">Schools</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Major Events Section -->
+        <section class="aca-events-section py-5 bg-light">
+            <div class="container">
+                <h3 class="aca-section-title fade-in">Iconic American Sporting Events</h3>
+                <div class="aca-events-timeline">
+                    <div class="aca-event-item fade-in">
+                        <div class="aca-event-date">February</div>
+                        <div class="aca-event-content">
+                            <h4 class="card-title-custom">Super Bowl</h4>
+                            <p class="card-text-custom">The championship game of the NFL, watched by over 100 million Americans. Known for its expensive commercials and halftime show featuring major music artists.</p>
+                        </div>
+                    </div>
+
+                    <div class="aca-event-item fade-in">
+                        <div class="aca-event-date">March-April</div>
+                        <div class="aca-event-content">
+                            <h4 class="card-title-custom">NCAA March Madness</h4>
+                            <p class="card-text-custom">The college basketball tournament that creates office pools and brackets across the country, with dramatic upsets and Cinderella stories.</p>
+                        </div>
+                    </div>
+
+                    <div class="aca-event-item fade-in">
+                        <div class="aca-event-date">July</div>
+                        <div class="aca-event-content">
+                            <h4 class="card-title-custom">MLB All-Star Game</h4>
+                            <p class="card-text-custom">"The Midsummer Classic" featuring the best baseball players, with home run derbies and fan voting determining the starters.</p>
+                        </div>
+                    </div>
+
+                    <div class="aca-event-item fade-in">
+                        <div class="aca-event-date">October</div>
+                        <div class="aca-event-content">
+                            <h4 class="card-title-custom">World Series</h4>
+                            <p class="card-text-custom">The championship series of Major League Baseball, determining the champion of America's oldest major professional sports league.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sports Impact Section -->
+        <section class="aca-impact-section py-5">
+            <div class="container">
+                <h3 class="aca-section-title fade-in">Cultural & Economic Impact</h3>
+                <div class="aca-impact-grid">
+                    <div class="aca-impact-card fade-in">
+                        <div class="aca-impact-icon"><i class="fas fa-dollar-sign"></i></div>
+                        <h4 class="card-title-custom">Economic Powerhouse</h4>
+                        <p class="card-text-custom">The US sports industry generates over $500 billion annually, supporting millions of jobs and driving local economies through stadiums, merchandise, and media rights.</p>
+                    </div>
+                    
+                    <div class="aca-impact-card fade-in">
+                        <div class="aca-impact-icon"><i class="fas fa-users"></i></div>
+                        <h4 class="card-title-custom">Community Building</h4>
+                        <p class="card-text-custom">Sports create shared identities and bring diverse communities together, from local little leagues to national teams representing American values.</p>
+                    </div>
+                    
+                    <div class="aca-impact-card fade-in">
+                        <div class="aca-impact-icon"><i class="fas fa-globe-americas"></i></div>
+                        <h4 class="card-title-custom">Global Influence</h4>
+                        <p class="card-text-custom">American sports like basketball and baseball have become global phenomena, while the NFL and NBA actively expand their international presence.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="aca-footer">
+        <div class="container">
+            <div class="aca-footer-content">
+                <div class="aca-footer-section">
+                    <h3>American Cultural Association</h3>
+                    <p>Exploring the rich heritage and traditions of the United States. Our mission is to promote understanding and appreciation of American culture worldwide through education and cultural exchange.</p>
+                </div>
+                
+                <div class="aca-footer-section">
+                    <h3>Team Members</h3>
+                    <div class="aca-team-members">
+                        <a href="contact.html#ilyas" class="aca-team-member">Iliyas</a>
+                        <a href="contact.html#yerkebulan" class="aca-team-member">Yerkebulan</a>
+                        <a href="contact.html#radmir" class="aca-team-member">Radmir</a>
+                        <a href="contact.html#ramazan" class="aca-team-member">Ramazan</a>
+                    </div>
+                </div>
+                
+                <div class="aca-footer-section">
+                    <h3>Quick Links</h3>
+                    <ul class="aca-footer-links">
+                        <li><a href="home.html"><i class="fas fa-chevron-right"></i> Home</a></li>
+                        <li><a href="cuisine.html"><i class="fas fa-chevron-right"></i> Cuisine</a></li>
+                        <li><a href="music.html"><i class="fas fa-chevron-right"></i> Music</a></li>
+                        <li><a href="movies.html"><i class="fas fa-chevron-right"></i> Movies</a></li>
+                        <li><a href="sports.html"><i class="fas fa-chevron-right"></i> Sports</a></li>
+                        <li><a href="landmarks.html"><i class="fas fa-chevron-right"></i> Landmarks</a></li>
+                        <li><a href="holidays.html"><i class="fas fa-chevron-right"></i> Holidays</a></li>
+                        <li><a href="contact.html"><i class="fas fa-chevron-right"></i> Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="aca-footer-bottom">
+                <p>&copy; 2025 American Cultural Association. All rights reserved. Educational purposes only.</p>
+            </div>
+        </div>
+    </footer>
+
+    <div class="floating-buttons">
+        <button id="adminAccessBtn" class="floating-btn" style="background: linear-gradient(135deg, #28a745, #20c997);">
+            <i class="fas fa-shield-alt me-2"></i>Admin Mode
+        </button>
+        <button id="openPopupBtn" class="floating-btn">
+            <i class="fas fa-envelope me-2"></i>Subscribe
+        </button>
+        <button id="themeToggleBtn" class="floating-btn">
+            <i class="fas fa-moon me-2"></i>Dark Mode
+        </button>
+    </div>
+
+    <div id="popupForm" class="popup-overlay">
+        <div class="popup-content">
+            <span class="close-btn">&times;</span>
+            <h3>Subscribe to Our Newsletter</h3>
+            <form id="popupSubscribeForm">
+                <div class="mb-3">
+                    <label for="popupName" class="form-label">Name</label>
+                    <input type="text" class="form-control form-control-custom" id="popupName" placeholder="Enter your name" required>
+                </div>
+                <div class="mb-3">
+                    <label for="popupEmail" class="form-label">Email</label>
+                    <input type="email" class="form-control form-control-custom" id="popupEmail" placeholder="Enter your email" required>
+                </div>
+                <button type="submit" class="btn btn-custom w-100">Subscribe Now</button>
+            </form>
+        </div>
+    </div>
+
+    <div id="notificationPanel" class="notification-panel">
+        <div class="notification-header">
+            <h5>Notifications</h5>
+            <div class="notification-actions">
+                <button id="markAllRead" class="btn btn-sm btn-outline-primary">
+                    <i class="fas fa-check-double"></i> Mark all as read
+                </button>
+                <button id="closeNotifications" class="btn btn-sm btn-close"></button>
+            </div>
+        </div>
+        <div class="notification-list" id="notificationList">
+        </div>
+        <div class="notification-footer">
+            <small class="text-muted">American Cultural Association Notifications</small>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/script.js"></script>
+    <script src="js/admin-panel.js"></script>
+</body>
+</html>

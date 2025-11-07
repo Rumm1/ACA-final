@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>American Cuisine - American Cultural Association</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="scrollProgressBar" class="scroll-progress-bar"></div>
+    
+    <nav class="navbar navbar-expand-lg navbar-dark navbar-custom sticky-top">
+        <div class="container">
+            <a class="navbar-brand-custom" href="home.html">
+                <img class="aca-logo-img" src="images/logoACA.webp" alt="ACA Logo">
+                <div>
+                    <h1 class="mb-0">American Cultural</h1>
+                    <p class="mb-0 opacity-8">Association</p>
+                </div>
+            </a>
+            
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                    <li tabindex="0" class="nav-item"><a class="nav-link nav-link-custom" href="home.html">Home</a></li>
+                    <li tabindex="0" class="nav-item"><a class="nav-link nav-link-custom active" href="cuisine.html">Cuisine</a></li>
+                    <li tabindex="0" class="nav-item"><a class="nav-link nav-link-custom" href="music.html">Music</a></li>
+                    <li tabindex="0" class="nav-item"><a class="nav-link nav-link-custom" href="movies.html">Movies</a></li>
+                    <li tabindex="0" class="nav-item"><a class="nav-link nav-link-custom" href="sports.html">Sports</a></li>
+                    <li tabindex="0" class="nav-item"><a class="nav-link nav-link-custom" href="landmarks.html">Landmarks</a></li>
+                    <li tabindex="0" class="nav-item"><a class="nav-link nav-link-custom" href="holidays.html">Holidays</a></li>
+                    <li tabindex="0" class="nav-item"><a class="nav-link nav-link-custom" href="contact.html">Contact</a></li>
+                </ul>
+                <img src="images/logoAITU.jpg" alt="University Logo" class="aca-university-logo ms-3">
+                <button id="notificationBell" class="btn notification-bell-btn position-relative">
+                    <i class="fas fa-bell"></i>
+                    <span id="notificationCount" class="notification-badge">0</span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <section class="aca-hero-cuisine">
+        <div class="container">
+            <div class="aca-hero-content fade-in">
+                <h2>Tastes of America</h2>
+                <p>Discover the rich culinary heritage of the United States through its diverse flavors and regional specialties</p>
+                <div id="timeGreeting" class="aca-greeting fade-in" style="font-size: 1.4rem; margin: 10px 0;"></div>
+                <div id="date-time-block" style="font-size: 1.2rem; font-weight: 500; margin-top: 20px;"></div>
+            </div>
+        </div>
+    </section>
+
+    <main>
+        <!-- Cuisine Intro Section -->
+        <section class="aca-cuisine-intro py-5">
+            <div class="container">
+                <div class="aca-cuisine-intro-content fade-in">
+                    <h3 class="aca-section-title">American Culinary Journey</h3>
+                    <p>American cuisine is a vibrant kaleidoscope of flavors, inspired by cultures from all over the world. From classic comfort foods to innovative fusion dishes, the culinary landscape of the United States tells the story of immigration, regional diversity, and cultural exchange.</p>
+                    <p>Each region boasts its own distinctive culinary traditions, shaped by local ingredients, historical influences, and cultural heritage. From the seafood shores of New England to the barbecue pits of Texas, American food reflects the nation's rich tapestry of experiences and traditions.</p>
+                    
+                    <div class="aca-quote-box fade-in">
+                        <p>"American food is an ever-evolving story of immigration, adaptation, and innovation. It's not just sustenance; it's a narrative of the American experience itself."</p>
+                        <span>— Culinary Historian John Smith</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Food Cards Section -->
+        <section class="aca-food-cards py-5 bg-light">
+            <div class="container">
+                <h3 class="aca-section-title fade-in">Iconic American Dishes</h3>
+                <div class="aca-food-cards-grid">
+                    <!-- Classic American Burger -->
+                    <div class="aca-food-card fade-in">
+                        <div class="aca-food-card-image">
+                            <img src="images/burger.png" alt="Classic American Burger" class="card-img-top card-img-custom">
+                        </div>
+                        <div class="aca-food-card-content">
+                            <h4 class="card-title-custom">Classic American Burger</h4>
+                            <p class="card-text-custom">The hamburger stands as an iconic symbol of American cuisine. This juicy masterpiece typically features a grilled beef patty, melted cheese, crisp lettuce, ripe tomatoes, onions, pickles, and special sauce, all nestled between a soft sesame seed bun.</p>
+                            <p class="card-text-custom">First popularized at the 1904 St. Louis World's Fair, the burger has evolved into countless regional variations across the United States.</p>
+                            <div class="aca-ingredients">
+                                <h5>Key Ingredients:</h5>
+                                <ul>
+                                    <li>Ground beef (80/20 lean-to-fat ratio)</li>
+                                    <li>Brioche or sesame seed bun</li>
+                                    <li>American or cheddar cheese</li>
+                                    <li>Iceberg lettuce and beefsteak tomatoes</li>
+                                    <li>Special sauce (mayo, ketchup, relish, spices)</li>
+                                    <li>Dill pickles and thinly sliced onions</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Traditional Apple Pie -->
+                    <div class="aca-food-card fade-in">
+                        <div class="aca-food-card-image">
+                            <img src="images/cus2.png" alt="Traditional Apple Pie" class="card-img-top card-img-custom">
+                        </div>
+                        <div class="aca-food-card-content">
+                            <h4 class="card-title-custom">Traditional Apple Pie</h4>
+                            <p class="card-text-custom">Apple pie has become synonymous with American comfort and tradition. This beloved dessert features a flaky, buttery crust enveloping a spiced apple filling, often served warm with a scoop of vanilla ice cream.</p>
+                            <p class="card-text-custom">The phrase "as American as apple pie" underscores its cultural significance, despite the dessert's European origins. It became particularly popular during the colonial era when apples were abundant.</p>
+                            <div class="aca-ingredients">
+                                <h5>Key Ingredients:</h5>
+                                <ul>
+                                    <li>Granny Smith or Honeycrisp apples</li>
+                                    <li>Cinnamon, nutmeg, and allspice</li>
+                                    <li>Butter-based pie crust</li>
+                                    <li>Brown and white sugar</li>
+                                    <li>Lemon juice and vanilla extract</li>
+                                    <li>Egg wash for golden crust</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- American Barbecue -->
+                    <div class="aca-food-card fade-in">
+                        <div class="aca-food-card-image">
+                            <img src="images/cus3.png" alt="American Barbecue" class="card-img-top card-img-custom">
+                        </div>
+                        <div class="aca-food-card-content">
+                            <h4 class="card-title-custom">American Barbecue Tradition</h4>
+                            <p class="card-text-custom">Barbecue represents one of America's most cherished culinary traditions, with distinct regional styles that reflect local history and preferences. From Texas brisket to Carolina pulled pork, each region has developed its own approach to slow-cooked meats.</p>
+                            <p class="card-text-custom">True American barbecue involves slow cooking over indirect heat, often for many hours, using specific wood types that impart unique flavors to the meat.</p>
+                            <div class="aca-ingredients">
+                                <h5>Regional Variations:</h5>
+                                <ul>
+                                    <li>Texas: Beef brisket with simple salt and pepper rub</li>
+                                    <li>Kansas City: Sweet, tomato-based sauces</li>
+                                    <li>Carolina: Vinegar-based sauces with pulled pork</li>
+                                    <li>Memphis: Dry-rubbed ribs served without sauce</li>
+                                    <li>Alabama: White sauce for chicken barbecue</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Regional Cuisine Section -->
+        <section class="aca-regional-cuisine py-5">
+            <div class="container">
+                <h3 class="aca-section-title fade-in">Regional American Cuisines</h3>
+                <div class="aca-regional-grid">
+                    <!-- New England -->
+                    <div class="aca-regional-card fade-in">
+                        <h4 class="card-title-custom">New England</h4>
+                        <p class="card-text-custom">Known for its seafood and hearty comfort foods, influenced by English culinary traditions.</p>
+                        <ul class="aca-regional-list">
+                            <li>Clam Chowder</li>
+                            <li>Lobster Rolls</li>
+                            <li>Baked Beans</li>
+                            <li>Boston Cream Pie</li>
+                        </ul>
+                    </div>
+                    
+                    <!-- Southern Cuisine -->
+                    <div class="aca-regional-card fade-in">
+                        <h4 class="card-title-custom">Southern Cuisine</h4>
+                        <p class="card-text-custom">Characterized by fried foods, greens, and dishes with African, English, and French influences.</p>
+                        <ul class="aca-regional-list">
+                            <li>Fried Chicken</li>
+                            <li>Shrimp and Grits</li>
+                            <li>Collard Greens</li>
+                            <li>Biscuits and Gravy</li>
+                        </ul>
+                    </div>
+                    
+                    <!-- Southwestern -->
+                    <div class="aca-regional-card fade-in">
+                        <h4 class="card-title-custom">Southwestern</h4>
+                        <p class="card-text-custom">Blends Native American and Mexican flavors with American cooking techniques.</p>
+                        <ul class="aca-regional-list">
+                            <li>Tex-Mex Enchiladas</li>
+                            <li>Chili Con Carne</li>
+                            <li>Breakfast Burritos</li>
+                            <li>Fajitas</li>
+                        </ul>
+                    </div>
+                    
+                    <!-- Pacific Northwest -->
+                    <div class="aca-regional-card fade-in">
+                        <h4 class="card-title-custom">Pacific Northwest</h4>
+                        <p class="card-text-custom">Focuses on fresh, local ingredients including seafood, berries, and forest mushrooms.</p>
+                        <ul class="aca-regional-list">
+                            <li>Salmon Dishes</li>
+                            <li>Dungeness Crab</li>
+                            <li>Hazelnut-based Recipes</li>
+                            <li>Marionberry Desserts</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- History Section -->
+        <section class="aca-cuisine-history py-5 bg-light">
+            <div class="container">
+                <div class="aca-history-content">
+                    <h3 class="aca-section-title fade-in">Evolution of American Cuisine</h3>
+                    <p class="card-text-custom">The story of American food is a narrative of adaptation and innovation. From Native American agricultural practices to the culinary contributions of immigrants from every corner of the globe, American cuisine has continuously evolved while maintaining distinct regional characteristics.</p>
+                    <p class="card-text-custom">The 20th century brought industrialization and fast food, but recent decades have seen a resurgence of interest in farm-to-table movements, artisanal foods, and a rediscovery of regional culinary traditions.</p>
+                    
+                    <div class="aca-history-timeline">
+                        <!-- Colonial Foundations -->
+                        <div class="aca-timeline-item fade-in">
+                            <div class="aca-timeline-year">1600s-1700s</div>
+                            <div class="aca-timeline-content">
+                                <h5 class="card-title-custom">Colonial Foundations</h5>
+                                <p class="card-text-custom">Native American ingredients (corn, beans, squash) combined with European cooking techniques. Development of regional cooking styles based on available ingredients.</p>
+                            </div>
+                        </div>
+                        
+                        <!-- Immigration and Expansion -->
+                        <div class="aca-timeline-item fade-in">
+                            <div class="aca-timeline-year">1800s</div>
+                            <div class="aca-timeline-content">
+                                <h5 class="card-title-custom">Immigration and Expansion</h5>
+                                <p class="card-text-custom">Wave of immigrants from Germany, Ireland, Italy, and China introduced new foods and cooking methods. Development of distinct regional cuisines as the country expanded westward.</p>
+                            </div>
+                        </div>
+                        
+                        <!-- Industrialization and Fast Food -->
+                        <div class="aca-timeline-item fade-in">
+                            <div class="aca-timeline-year">1900s</div>
+                            <div class="aca-timeline-content">
+                                <h5 class="card-title-custom">Industrialization and Fast Food</h5>
+                                <p class="card-text-custom">Mass production, canned foods, and the rise of fast food chains. Development of convenience foods and standardized restaurant menus across the country.</p>
+                            </div>
+                        </div>
+                        
+                        <!-- Culinary Renaissance -->
+                        <div class="aca-timeline-item fade-in">
+                            <div class="aca-timeline-year">2000s-Present</div>
+                            <div class="aca-timeline-content">
+                                <h5 class="card-title-custom">Culinary Renaissance</h5>
+                                <p class="card-text-custom">Farm-to-table movement, rediscovery of regional traditions, fusion cuisines, and emphasis on sustainability and locally sourced ingredients.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="aca-footer">
+        <div class="container">
+            <div class="aca-footer-content">
+                <div class="aca-footer-section">
+                    <h3>American Cultural Association</h3>
+                    <p>Exploring the rich heritage and traditions of the United States. Our mission is to promote understanding and appreciation of American culture worldwide through education and cultural exchange.</p>
+                </div>
+                
+                <div class="aca-footer-section">
+                    <h3>Team Members</h3>
+                    <div class="aca-team-members">
+                        <a href="contact.html#ilyas" class="aca-team-member">Iliyas</a>
+                        <a href="contact.html#yerkebulan" class="aca-team-member">Yerkebulan</a>
+                        <a href="contact.html#radmir" class="aca-team-member">Radmir</a>
+                        <a href="contact.html#ramazan" class="aca-team-member">Ramazan</a>
+                    </div>
+                </div>
+                
+                <div class="aca-footer-section">
+                    <h3>Quick Links</h3>
+                    <ul class="aca-footer-links">
+                        <li><a href="home.html"><i class="fas fa-chevron-right"></i> Home</a></li>
+                        <li><a href="cuisine.html"><i class="fas fa-chevron-right"></i> Cuisine</a></li>
+                        <li><a href="music.html"><i class="fas fa-chevron-right"></i> Music</a></li>
+                        <li><a href="movies.html"><i class="fas fa-chevron-right"></i> Movies</a></li>
+                        <li><a href="sports.html"><i class="fas fa-chevron-right"></i> Sports</a></li>
+                        <li><a href="landmarks.html"><i class="fas fa-chevron-right"></i> Landmarks</a></li>
+                        <li><a href="holidays.html"><i class="fas fa-chevron-right"></i> Holidays</a></li>
+                        <li><a href="contact.html"><i class="fas fa-chevron-right"></i> Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="aca-footer-bottom">
+                <p>&copy; 2025 American Cultural Association. All rights reserved. Educational purposes only.</p>
+            </div>
+        </div>
+    </footer>
+
+    <div class="floating-buttons">
+        <button id="adminAccessBtn" class="floating-btn" style="background: linear-gradient(135deg, #28a745, #20c997);">
+            <i class="fas fa-shield-alt me-2"></i>Admin Mode
+        </button>
+        <button id="openPopupBtn" class="floating-btn">
+            <i class="fas fa-envelope me-2"></i>Subscribe
+        </button>
+        <button id="themeToggleBtn" class="floating-btn">
+            <i class="fas fa-moon me-2"></i>Dark Mode
+        </button>
+    </div>
+
+    <div id="popupForm" class="popup-overlay">
+        <div class="popup-content">
+            <span class="close-btn">&times;</span>
+            <h3>Subscribe to Our Newsletter</h3>
+            <form id="popupSubscribeForm">
+                <div class="mb-3">
+                    <label for="popupName" class="form-label">Name</label>
+                    <input type="text" class="form-control form-control-custom" id="popupName" placeholder="Enter your name" required>
+                </div>
+                <div class="mb-3">
+                    <label for="popupEmail" class="form-label">Email</label>
+                    <input type="email" class="form-control form-control-custom" id="popupEmail" placeholder="Enter your email" required>
+                </div>
+                <button type="submit" class="btn btn-custom w-100">Subscribe Now</button>
+            </form>
+        </div>
+    </div>
+
+    <div id="notificationPanel" class="notification-panel">
+        <div class="notification-header">
+            <h5>Notifications</h5>
+            <div class="notification-actions">
+                <button id="markAllRead" class="btn btn-sm btn-outline-primary">
+                    <i class="fas fa-check-double"></i> Mark all as read
+                </button>
+                <button id="closeNotifications" class="btn btn-sm btn-close"></button>
+            </div>
+        </div>
+        <div class="notification-list" id="notificationList">
+        </div>
+        <div class="notification-footer">
+            <small class="text-muted">American Cultural Association Notifications</small>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
+    <script src="admin-panel.js"></script>
+</body>
+</html>

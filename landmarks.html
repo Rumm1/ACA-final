@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>American Landmarks - American Cultural Association</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/landmarks.css">
+</head>
+<body>
+    <div id="scrollProgressBar" class="scroll-progress-bar"></div>
+    
+    <nav class="navbar navbar-expand-lg navbar-dark navbar-custom sticky-top">
+        <div class="container">
+            <a class="navbar-brand-custom" href="home.html">
+                <img class="aca-logo-img" src="images/logoACA.webp" alt="ACA Logo">
+                <div>
+                    <h1 class="mb-0">American Cultural</h1>
+                    <p class="mb-0 opacity-8">Association</p>
+                </div>
+            </a>
+            
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                    <li tabindex="0" class="nav-item"><a class="nav-link nav-link-custom" href="home.html">Home</a></li>
+                    <li tabindex="0" class="nav-item"><a class="nav-link nav-link-custom" href="cuisine.html">Cuisine</a></li>
+                    <li tabindex="0" class="nav-item"><a class="nav-link nav-link-custom" href="music.html">Music</a></li>
+                    <li tabindex="0" class="nav-item"><a class="nav-link nav-link-custom" href="movies.html">Movies</a></li>
+                    <li tabindex="0" class="nav-item"><a class="nav-link nav-link-custom" href="sports.html">Sports</a></li>
+                    <li tabindex="0" class="nav-item"><a class="nav-link nav-link-custom active" href="landmarks.html">Landmarks</a></li>
+                    <li tabindex="0" class="nav-item"><a class="nav-link nav-link-custom" href="holidays.html">Holidays</a></li>
+                    <li tabindex="0" class="nav-item"><a class="nav-link nav-link-custom" href="contact.html">Contact</a></li>
+                </ul>
+                <img src="images/logoAITU.jpg" alt="University Logo" class="aca-university-logo ms-3">
+                <button id="notificationBell" class="btn notification-bell-btn position-relative">
+                    <i class="fas fa-bell"></i>
+                    <span id="notificationCount" class="notification-badge">0</span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <section class="aca-hero-landmarks">
+        <div class="container">
+            <div class="aca-hero-content fade-in">
+                <h2>Historic American Landmarks</h2>
+                <p>Discover the monuments and natural wonders that define America's heritage and tell the story of a nation</p>
+                <div id="timeGreeting" class="aca-greeting fade-in" style="font-size: 1.4rem; margin: 10px 0;"></div>
+                <div id="date-time-block" style="font-size: 1.2rem; font-weight: 500; margin-top: 20px;"></div>
+            </div>
+        </div>
+    </section>
+
+    <main>
+        <!-- Landmarks Intro Section -->
+        <section class="aca-landmarks-intro py-5">
+            <div class="container">
+                <div class="aca-landmarks-intro-content fade-in">
+                    <h3 class="aca-section-title">Iconic American Landmarks</h3>
+                    <p>From coast to coast, America is home to some of the world's most recognizable landmarks. These monuments, natural wonders, and historic sites tell the story of our nation's history, values, and natural beauty. Each landmark represents a chapter in the American story, from the struggle for independence to the expansion westward and the technological innovations that shaped the modern world.</p>
+                    <p>These sites not only attract millions of visitors each year but also serve as enduring symbols of American ideals, achievements, and the diverse natural landscapes that make the United States unique. Preservation efforts ensure that future generations can continue to learn from and be inspired by these national treasures.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Landmarks Grid Section -->
+        <section class="aca-landmarks-grid-section py-5 bg-light">
+            <div class="container">
+                <h3 class="aca-section-title fade-in">Explore American Landmarks</h3>
+                <div class="aca-landmarks-grid">
+                    <!-- Statue of Liberty -->
+                    <div class="aca-landmark-card fade-in">
+                        <div class="aca-landmark-image">
+                            <img src="images/statue-liberty.avif" alt="Statue of Liberty" class="card-img-top card-img-custom">
+                        </div>
+                        <div class="aca-landmark-info">
+                            <h4 class="card-title-custom">Statue of Liberty</h4>
+                            <p class="aca-landmark-location"><i class="fas fa-map-marker-alt"></i> New York Harbor, New York</p>
+                            <p class="card-text-custom">A powerful symbol of freedom and democracy, the Statue of Liberty was gifted to the United States by France in 1886 to commemorate the centennial of American independence. Designed by Frédéric Auguste Bartholdi, this colossal neoclassical sculpture stands on Liberty Island in New York Harbor.</p>
+                            <div class="aca-landmark-facts">
+                                <h5><i class="fas fa-info-circle"></i> Key Facts</h5>
+                                <ul>
+                                    <li><i class="fas fa-calendar-alt"></i> <strong>Dedicated:</strong> October 28, 1886</li>
+                                    <li><i class="fas fa-ruler-vertical"></i> <strong>Height:</strong> 305 feet (93 meters)</li>
+                                    <li><i class="fas fa-weight"></i> <strong>Weight:</strong> 225 tons</li>
+                                    <li><i class="fas fa-users"></i> <strong>Visitors:</strong> 4.3 million annually</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- White House -->
+                    <div class="aca-landmark-card fade-in">
+                        <div class="aca-landmark-image">
+                            <img src="images/white-house.jpg" alt="The White House" class="card-img-top card-img-custom">
+                        </div>
+                        <div class="aca-landmark-info">
+                            <h4 class="card-title-custom">The White House</h4>
+                            <p class="aca-landmark-location"><i class="fas fa-map-marker-alt"></i> Washington, D.C.</p>
+                            <p class="card-text-custom">The White House has been the official residence and workplace of every U.S. president since John Adams in 1800. Located at 1600 Pennsylvania Avenue NW in Washington, D.C., this neoclassical mansion is an enduring symbol of the American presidency and the executive branch.</p>
+                            <div class="aca-landmark-facts">
+                                <h5><i class="fas fa-info-circle"></i> Key Facts</h5>
+                                <ul>
+                                    <li><i class="fas fa-calendar-alt"></i> <strong>Built:</strong> 1792-1800</li>
+                                    <li><i class="fas fa-door-open"></i> <strong>Rooms:</strong> 132 rooms</li>
+                                    <li><i class="fas fa-expand"></i> <strong>Area:</strong> 55,000 sq ft</li>
+                                    <li><i class="fas fa-tree"></i> <strong>Grounds:</strong> 18 acres</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Mount Rushmore -->
+                    <div class="aca-landmark-card fade-in">
+                        <div class="aca-landmark-image">
+                            <img src="images/mount-rushmore.jpg" alt="Mount Rushmore" class="card-img-top card-img-custom">
+                        </div>
+                        <div class="aca-landmark-info">
+                            <h4 class="card-title-custom">Mount Rushmore</h4>
+                            <p class="aca-landmark-location"><i class="fas fa-map-marker-alt"></i> Black Hills, South Dakota</p>
+                            <p class="card-text-custom">A monumental sculpture carved into granite featuring the faces of four U.S. Presidents: Washington, Jefferson, Theodore Roosevelt, and Lincoln. The memorial represents the first 150 years of American history and has become an iconic symbol of American democracy and presidential leadership.</p>
+                            <div class="aca-landmark-facts">
+                                <h5><i class="fas fa-info-circle"></i> Key Facts</h5>
+                                <ul>
+                                    <li><i class="fas fa-calendar-alt"></i> <strong>Completed:</strong> 1941</li>
+                                    <li><i class="fas fa-ruler-vertical"></i> <strong>Face Height:</strong> 60 feet each</li>
+                                    <li><i class="fas fa-mountain"></i> <strong>Elevation:</strong> 5,725 feet</li>
+                                    <li><i class="fas fa-users"></i> <strong>Visitors:</strong> 3 million annually</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Grand Canyon -->
+                    <div class="aca-landmark-card aca-landmark-featured fade-in">
+                        <div class="aca-landmark-image">
+                            <img src="images/grand-canyon.jpg" alt="Grand Canyon" class="card-img-top card-img-custom">
+                            <div class="aca-featured-badge">Featured</div>
+                        </div>
+                        <div class="aca-landmark-info">
+                            <h4 class="card-title-custom">Grand Canyon</h4>
+                            <p class="aca-landmark-location"><i class="fas fa-map-marker-alt"></i> Arizona</p>
+                            <p class="card-text-custom">One of the world's most spectacular natural wonders, carved by the Colorado River over millions of years. A UNESCO World Heritage Site since 1979, the canyon showcases billions of years of geological history through its immense size and beautifully colored landscape.</p>
+                            <div class="aca-landmark-facts">
+                                <h5><i class="fas fa-info-circle"></i> Key Facts</h5>
+                                <ul>
+                                    <li><i class="fas fa-ruler"></i> <strong>Length:</strong> 277 miles</li>
+                                    <li><i class="fas fa-arrows-alt-h"></i> <strong>Width:</strong> 4-18 miles</li>
+                                    <li><i class="fas fa-arrows-alt-v"></i> <strong>Depth:</strong> 6,000 feet</li>
+                                    <li><i class="fas fa-users"></i> <strong>Visitors:</strong> 6 million annually</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Golden Gate Bridge -->
+                    <div class="aca-landmark-card fade-in">
+                        <div class="aca-landmark-image">
+                            <img src="images/golden-gate-bridge.avif" alt="Golden Gate Bridge" class="card-img-top card-img-custom">
+                        </div>
+                        <div class="aca-landmark-info">
+                            <h4 class="card-title-custom">Golden Gate Bridge</h4>
+                            <p class="aca-landmark-location"><i class="fas fa-map-marker-alt"></i> San Francisco, California</p>
+                            <p class="card-text-custom">An iconic suspension bridge connecting San Francisco to Marin County, recognized worldwide for its Art Deco design and International Orange color. When completed in 1937, it was both the longest and the tallest suspension bridge in the world.</p>
+                            <div class="aca-landmark-facts">
+                                <h5><i class="fas fa-info-circle"></i> Key Facts</h5>
+                                <ul>
+                                    <li><i class="fas fa-calendar-alt"></i> <strong>Opened:</strong> May 27, 1937</li>
+                                    <li><i class="fas fa-ruler"></i> <strong>Length:</strong> 8,980 feet</li>
+                                    <li><i class="fas fa-ruler-vertical"></i> <strong>Height:</strong> 746 feet</li>
+                                    <li><i class="fas fa-car"></i> <strong>Daily Traffic:</strong> 112,000 vehicles</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Lincoln Memorial -->
+                    <div class="aca-landmark-card fade-in">
+                        <div class="aca-landmark-image">
+                            <img src="images/lincoln-memorial.jpg" alt="Lincoln Memorial" class="card-img-top card-img-custom">
+                        </div>
+                        <div class="aca-landmark-info">
+                            <h4 class="card-title-custom">Lincoln Memorial</h4>
+                            <p class="aca-landmark-location"><i class="fas fa-map-marker-alt"></i> Washington, D.C.</p>
+                            <p class="card-text-custom">A neoclassical temple honoring Abraham Lincoln, the 16th President who preserved the Union during the Civil War and worked to end slavery. The memorial has been the site of many historic events, most notably Martin Luther King Jr.'s "I Have a Dream" speech in 1963.</p>
+                            <div class="aca-landmark-facts">
+                                <h5><i class="fas fa-info-circle"></i> Key Facts</h5>
+                                <ul>
+                                    <li><i class="fas fa-calendar-alt"></i> <strong>Dedicated:</strong> May 30, 1922</li>
+                                    <li><i class="fas fa-ruler-vertical"></i> <strong>Statue Height:</strong> 19 feet</li>
+                                    <li><i class="fas fa-weight"></i> <strong>Statue Weight:</strong> 175 tons</li>
+                                    <li><i class="fas fa-users"></i> <strong>Visitors:</strong> 6 million annually</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Visit Tips Section -->
+        <section class="aca-visit-section py-5">
+            <div class="container">
+                <h3 class="aca-section-title fade-in">Plan Your Landmark Adventure</h3>
+                <div class="aca-visit-tips">
+                    <div class="aca-tip-card fade-in">
+                        <div class="aca-tip-icon">
+                            <i class="fas fa-calendar-alt"></i>
+                        </div>
+                        <h4 class="card-title-custom">Best Time to Visit</h4>
+                        <p class="card-text-custom">Spring (April-May) and fall (September-October) offer the most pleasant weather conditions for visiting most American landmarks. These seasons typically feature mild temperatures, fewer crowds compared to summer months, and beautiful natural scenery.</p>
+                    </div>
+                    
+                    <div class="aca-tip-card fade-in">
+                        <div class="aca-tip-icon">
+                            <i class="fas fa-ticket-alt"></i>
+                        </div>
+                        <h4 class="card-title-custom">Booking in Advance</h4>
+                        <p class="card-text-custom">Many popular American landmarks require advance reservations, sometimes months ahead of your visit. The Statue of Liberty, White House tours, and Alcatraz Island often sell out quickly. Check official National Park Service websites for timed entry requirements.</p>
+                    </div>
+                    
+                    <div class="aca-tip-card fade-in">
+                        <div class="aca-tip-icon">
+                            <i class="fas fa-clock"></i>
+                        </div>
+                        <h4 class="card-title-custom">Planning Your Time</h4>
+                        <p class="card-text-custom">Security screenings and large crowds can significantly impact your visit time. Arrive early to avoid the longest lines, especially at popular landmarks. Allow extra time for parking, which can be challenging at busy sites.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- History Section -->
+        <section class="aca-history-section py-5 bg-light">
+            <div class="container">
+                <div class="aca-history-content">
+                    <h3 class="aca-section-title fade-in">Historical Significance of American Landmarks</h3>
+                    <p class="card-text-custom">American landmarks represent more than just physical structures or natural wonders—they embody the nation's history, values, and aspirations. These sites serve as tangible connections to pivotal moments in American history, from the founding of the republic to the expansion westward and the struggle for civil rights.</p>
+                    
+                    <div class="aca-history-timeline">
+                        <div class="aca-history-item fade-in">
+                            <div class="aca-history-year">1872</div>
+                            <div class="aca-history-details">
+                                <h4 class="card-title-custom">First National Park Established</h4>
+                                <p class="card-text-custom">Yellowstone became the world's first national park, setting a precedent for the preservation of natural wonders and the establishment of the National Park System.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="aca-history-item fade-in">
+                            <div class="aca-history-year">1906</div>
+                            <div class="aca-history-details">
+                                <h4 class="card-title-custom">Antiquities Act Passed</h4>
+                                <p class="card-text-custom">President Theodore Roosevelt signed the Antiquities Act, giving presidents the authority to create national monuments from federal lands to protect significant natural, cultural, or scientific features.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="aca-history-item fade-in">
+                            <div class="aca-history-year">1916</div>
+                            <div class="aca-history-details">
+                                <h4 class="card-title-custom">National Park Service Created</h4>
+                                <p class="card-text-custom">President Woodrow Wilson established the National Park Service through the Organic Act, creating a federal agency dedicated to protecting and managing America's natural and cultural resources.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="aca-history-item fade-in">
+                            <div class="aca-history-year">1966</div>
+                            <div class="aca-history-details">
+                                <h4 class="card-title-custom">National Historic Preservation Act</h4>
+                                <p class="card-text-custom">This legislation established the National Register of Historic Places and the process for listing properties, creating a comprehensive system for preserving America's historic resources.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Map Section -->
+        <section class="aca-map-section py-5">
+            <div class="container">
+                <h3 class="aca-section-title fade-in">Landmarks Across America</h3>
+                <p class="aca-section-subtitle">Explore the geographical distribution of major American landmarks from coast to coast</p>
+                <div class="aca-map-container fade-in">
+                    <iframe 
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d20355104.85556845!2d-108.8593137982782!3d45.649979467358776!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x54eab584e432360b%3A0x1c3bb99243deb742!2z0KHQvtC10LTQuNC90LXQvdC90YvQtSDQqNGC0LDRgtGLINCQ0LzQtdGA0LjQutC4!5e0!3m2!1sru!2skz!4v1758480189379!5m2!1sru!2skz" 
+                        class="aca-landmarks-map"
+                        allowfullscreen="" 
+                        loading="lazy" 
+                        referrerpolicy="no-referrer-when-downgrade">
+                    </iframe>
+                </div>
+            </div>
+        </section>
+
+        <!-- More Landmarks Section -->
+        <section class="aca-more-landmarks py-5 bg-light">
+            <div class="container">
+                <h3 class="aca-section-title fade-in">More Iconic American Landmarks</h3>
+                <div class="aca-more-landmarks-grid">
+                    <div class="aca-more-landmark-item fade-in">
+                        <h4 class="card-title-custom">Independence Hall</h4>
+                        <p class="card-text-custom">Philadelphia, Pennsylvania - Birthplace of the Declaration of Independence and U.S. Constitution</p>
+                    </div>
+                    
+                    <div class="aca-more-landmark-item fade-in">
+                        <h4 class="card-title-custom">Yellowstone National Park</h4>
+                        <p class="card-text-custom">Wyoming/Montana/Idaho - World's first national park with geothermal wonders and diverse wildlife</p>
+                    </div>
+                    
+                    <div class="aca-more-landmark-item fade-in">
+                        <h4 class="card-title-custom">Alcatraz Island</h4>
+                        <p class="card-text-custom">San Francisco, California - Former federal prison with rich history and stunning bay views</p>
+                    </div>
+                    
+                    <div class="aca-more-landmark-item fade-in">
+                        <h4 class="card-title-custom">Gateway Arch</h4>
+                        <p class="card-text-custom">St. Louis, Missouri - Monument symbolizing America's westward expansion and pioneer spirit</p>
+                    </div>
+                    
+                    <div class="aca-more-landmark-item fade-in">
+                        <h4 class="card-title-custom">Niagara Falls</h4>
+                        <p class="card-text-custom">New York/Ontario - Majestic waterfalls straddling the US-Canada border</p>
+                    </div>
+                    
+                    <div class="aca-more-landmark-item fade-in">
+                        <h4 class="card-title-custom">Space Needle</h4>
+                        <p class="card-text-custom">Seattle, Washington - Iconic observation tower built for the 1962 World's Fair</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="aca-footer">
+        <div class="container">
+            <div class="aca-footer-content">
+                <div class="aca-footer-section">
+                    <h3>American Cultural Association</h3>
+                    <p>Exploring the rich heritage and traditions of the United States. Our mission is to promote understanding and appreciation of American culture worldwide through education and cultural exchange.</p>
+                </div>
+                
+                <div class="aca-footer-section">
+                    <h3>Team Members</h3>
+                    <div class="aca-team-members">
+                        <a href="contact.html#ilyas" class="aca-team-member">Iliyas</a>
+                        <a href="contact.html#yerkebulan" class="aca-team-member">Yerkebulan</a>
+                        <a href="contact.html#radmir" class="aca-team-member">Radmir</a>
+                        <a href="contact.html#ramazan" class="aca-team-member">Ramazan</a>
+                    </div>
+                </div>
+                
+                <div class="aca-footer-section">
+                    <h3>Quick Links</h3>
+                    <ul class="aca-footer-links">
+                        <li><a href="home.html"><i class="fas fa-chevron-right"></i> Home</a></li>
+                        <li><a href="cuisine.html"><i class="fas fa-chevron-right"></i> Cuisine</a></li>
+                        <li><a href="music.html"><i class="fas fa-chevron-right"></i> Music</a></li>
+                        <li><a href="movies.html"><i class="fas fa-chevron-right"></i> Movies</a></li>
+                        <li><a href="sports.html"><i class="fas fa-chevron-right"></i> Sports</a></li>
+                        <li><a href="landmarks.html"><i class="fas fa-chevron-right"></i> Landmarks</a></li>
+                        <li><a href="holidays.html"><i class="fas fa-chevron-right"></i> Holidays</a></li>
+                        <li><a href="contact.html"><i class="fas fa-chevron-right"></i> Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="aca-footer-bottom">
+                <p>&copy; 2025 American Cultural Association. All rights reserved. Educational purposes only.</p>
+            </div>
+        </div>
+    </footer>
+
+    <div class="floating-buttons">
+        <button id="adminAccessBtn" class="floating-btn" style="background: linear-gradient(135deg, #28a745, #20c997);">
+            <i class="fas fa-shield-alt me-2"></i>Admin Mode
+        </button>
+        <button id="openPopupBtn" class="floating-btn">
+            <i class="fas fa-envelope me-2"></i>Subscribe
+        </button>
+        <button id="themeToggleBtn" class="floating-btn">
+            <i class="fas fa-moon me-2"></i>Dark Mode
+        </button>
+    </div>
+
+    <div id="popupForm" class="popup-overlay">
+        <div class="popup-content">
+            <span class="close-btn">&times;</span>
+            <h3>Subscribe to Our Newsletter</h3>
+            <form id="popupSubscribeForm">
+                <div class="mb-3">
+                    <label for="popupName" class="form-label">Name</label>
+                    <input type="text" class="form-control form-control-custom" id="popupName" placeholder="Enter your name" required>
+                </div>
+                <div class="mb-3">
+                    <label for="popupEmail" class="form-label">Email</label>
+                    <input type="email" class="form-control form-control-custom" id="popupEmail" placeholder="Enter your email" required>
+                </div>
+                <button type="submit" class="btn btn-custom w-100">Subscribe Now</button>
+            </form>
+        </div>
+    </div>
+
+    <div id="notificationPanel" class="notification-panel">
+        <div class="notification-header">
+            <h5>Notifications</h5>
+            <div class="notification-actions">
+                <button id="markAllRead" class="btn btn-sm btn-outline-primary">
+                    <i class="fas fa-check-double"></i> Mark all as read
+                </button>
+                <button id="closeNotifications" class="btn btn-sm btn-close"></button>
+            </div>
+        </div>
+        <div class="notification-list" id="notificationList">
+        </div>
+        <div class="notification-footer">
+            <small class="text-muted">American Cultural Association Notifications</small>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/script.js"></script>
+    <script src="js/admin-panel.js"></script>
+</body>
+</html>

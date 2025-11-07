@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - American Cultural Association</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="scrollProgressBar" class="scroll-progress-bar"></div>
+    
+    <nav class="navbar navbar-expand-lg navbar-dark navbar-custom sticky-top">
+        <div class="container">
+            <a class="navbar-brand-custom" href="home.html">
+                <img class="aca-logo-img" src="images/logoACA.webp" alt="ACA Logo">
+                <div>
+                    <h1 class="mb-0">American Cultural</h1>
+                    <p class="mb-0 opacity-8">Association</p>
+                </div>
+            </a>
+            
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                    <li tabindex="0" class="nav-item"><a class="nav-link nav-link-custom" href="home.html">Home</a></li>
+                    <li tabindex="0" class="nav-item"><a class="nav-link nav-link-custom" href="cuisine.html">Cuisine</a></li>
+                    <li tabindex="0" class="nav-item"><a class="nav-link nav-link-custom" href="music.html">Music</a></li>
+                    <li tabindex="0" class="nav-item"><a class="nav-link nav-link-custom" href="movies.html">Movies</a></li>
+                    <li tabindex="0" class="nav-item"><a class="nav-link nav-link-custom" href="sports.html">Sports</a></li>
+                    <li tabindex="0" class="nav-item"><a class="nav-link nav-link-custom" href="landmarks.html">Landmarks</a></li>
+                    <li tabindex="0" class="nav-item"><a class="nav-link nav-link-custom" href="holidays.html">Holidays</a></li>
+                    <li tabindex="0" class="nav-item"><a class="nav-link nav-link-custom active" href="contact.html">Contact</a></li>
+                </ul>
+                <img src="images/logoAITU.jpg" alt="University Logo" class="aca-university-logo ms-3">
+                <button id="notificationBell" class="btn notification-bell-btn position-relative">
+                    <i class="fas fa-bell"></i>
+                    <span id="notificationCount" class="notification-badge">0</span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <section class="aca-hero">
+        <div class="container">
+            <div class="aca-hero-content fade-in">
+                <h2>Get in Touch</h2>
+                <p>We'd love to hear from you about American culture</p>
+                <div id="timeGreeting" class="aca-greeting fade-in" style="font-size: 1.4rem; margin: 10px 0;"></div>
+                <div id="date-time-block" style="font-size: 1.2rem; font-weight: 500; margin-top: 20px;"></div>
+            </div>
+        </div>
+    </section>
+
+    <main>
+        <section class="aca-contact-team-section py-5">
+            <div class="container">
+                <h3 class="aca-section-title fade-in">Meet Our Team</h3>
+                <p class="aca-contact-intro-text fade-in">
+                    We are students passionate about exploring and sharing American culture through this educational project.
+                </p>
+                
+                <div class="aca-contact-team-grid">
+                    <!-- Iliyas -->
+                    <div class="aca-contact-team-member fade-in" onclick="toggleMember(this)">
+                        <img src="images/iliyas.jpg" alt="Iliyas" class="aca-contact-team-image">
+                        <h3 class="aca-contact-member-name">Iliyas Aitzhan</h3>
+                        <p class="aca-contact-member-role">Project Lead & Developer</p>
+                        <p class="aca-contact-member-description">Responsible for music and movie pages development and project coordination.</p>
+                        <div class="aca-contact-member-contact">
+                            <span class="aca-contact-info">241705@astanait.edu.kz</span>
+                            <div class="aca-contact-social">
+                                <a href="https://t.me/axeelias" target="_blank" title="Telegram">
+                                    <i class="fab fa-telegram"></i>
+                                </a>
+                                <a href="https://instagram.com/axeelias" target="_blank" title="Instagram">
+                                    <i class="fab fa-instagram"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Yerkebulan -->
+                    <div class="aca-contact-team-member fade-in" onclick="toggleMember(this)">
+                        <img src="images/Erkosh.jpg" alt="Yerkebulan Rakhymbay" class="aca-contact-team-image">
+                        <h3 class="aca-contact-member-name">Yerkebulan Rakhymbay</h3>
+                        <p class="aca-contact-member-role">Frontend Developer</p>
+                        <p class="aca-contact-member-description">Focused on cuisine and homepage pages with modern web technologies.</p>
+                        <div class="aca-contact-member-contact">
+                            <span class="aca-contact-info">240065@astanait.edu.kz</span>
+                            <div class="aca-contact-social">
+                                <a href="https://t.me/erko_rkh" target="_blank" title="Telegram">
+                                    <i class="fab fa-telegram"></i>
+                                </a>
+                                <a href="https://instagram.com/erko_rkh" target="_blank" title="Instagram">
+                                    <i class="fab fa-instagram"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Radmir -->
+                    <div class="aca-contact-team-member fade-in" onclick="toggleMember(this)">
+                        <img src="images/Radik.jpg" alt="Radmir Toizhanov" class="aca-contact-team-image">
+                        <h3 class="aca-contact-member-name">Radmir Toizhanov</h3>
+                        <p class="aca-contact-member-role">Content Developer</p>
+                        <p class="aca-contact-member-description">Handled sports and holidays pages content creation and design.</p>
+                        <div class="aca-contact-member-contact">
+                            <span class="aca-contact-info">241561@astanait.edu.kz</span>
+                            <div class="aca-contact-social">
+                                <a href="https://t.me/ruflexm" target="_blank" title="Telegram">
+                                    <i class="fab fa-telegram"></i>
+                                </a>
+                                <a href="https://www.instagram.com/ruflexp?igsh=MTN1enJnNmx4NGk2eQ==" target="_blank" title="Instagram">
+                                    <i class="fab fa-instagram"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Ramazan -->
+                    <div class="aca-contact-team-member fade-in" onclick="toggleMember(this)">
+                        <img src="images/Roma.jpg" alt="Ramazan Nagimov" class="aca-contact-team-image">
+                        <h3 class="aca-contact-member-name">Ramazan Nagimov</h3>
+                        <p class="aca-contact-member-role">UI/UX Developer</p>
+                        <p class="aca-contact-member-description">Responsible for landmarks and contact pages design and user experience.</p>
+                        <div class="aca-contact-member-contact">
+                            <span class="aca-contact-info">242394@astanait.edu.kz</span>
+                            <div class="aca-contact-social">
+                                <a href="https://t.me/Zamazeeeeein" target="_blank" title="Telegram">
+                                    <i class="fab fa-telegram"></i>
+                                </a>
+                                <a href="https://www.instagram.com/zamazeeeeeein?igsh=YmdjczlqMncwdzI4" target="_blank" title="Instagram">
+                                    <i class="fab fa-instagram"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Form Section -->
+        <section class="aca-contact-form-section py-5">
+            <div class="container">
+                <h3 class="aca-section-title fade-in">Send Us a Message</h3>
+                <p class="aca-contact-form-description fade-in">
+                    Have questions about American culture or feedback about our website? We'd love to hear from you!
+                </p>
+                
+                <div class="aca-contact-form-container fade-in">
+                    <form class="aca-contact-form" id="contactForm">
+                        <div class="aca-contact-form-row">
+                            <div class="aca-contact-form-group">
+                                <label for="firstName">First Name*</label>
+                                <input type="text" id="firstName" name="firstName" class="aca-contact-form-input" required>
+                            </div>
+                            <div class="aca-contact-form-group">
+                                <label for="lastName">Last Name*</label>
+                                <input type="text" id="lastName" name="lastName" class="aca-contact-form-input" required>
+                            </div>
+                        </div>
+
+                        <div class="aca-contact-form-group">
+                            <label for="email">Email Address*</label>
+                            <input type="email" id="email" name="email" class="aca-contact-form-input" required>
+                        </div>
+
+                        <div class="aca-contact-form-group">
+                            <label for="phone">Phone Number</label>
+                            <input type="tel" id="phone" name="phone" class="aca-contact-form-input">
+                        </div>
+
+                        <div class="aca-contact-form-group">
+                            <label for="subject">Subject*</label>
+                            <select id="subject" name="subject" class="aca-contact-form-select" required>
+                                <option value="">Please select a subject</option>
+                                <option value="feedback">Website Feedback</option>
+                                <option value="question">Question About American Culture</option>
+                                <option value="collaboration">Collaboration Inquiry</option>
+                                <option value="technical">Technical Issue</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </div>
+
+                        <div class="aca-contact-form-group">
+                            <label for="message">Message*</label>
+                            <textarea id="message" name="message" class="aca-contact-form-textarea" rows="6" placeholder="Please share your thoughts, questions, or feedback about American culture or our website..." required></textarea>
+                        </div>
+
+                        <div class="aca-contact-form-group aca-contact-checkbox-group">
+                            <input type="checkbox" id="newsletter" name="newsletter" class="aca-contact-form-checkbox">
+                            <label for="newsletter" class="aca-contact-checkbox-label">I'd like to receive updates about this project</label>
+                        </div>
+
+                        <div class="aca-contact-form-actions">
+                            <button type="submit" class="aca-contact-submit-button">
+                                <i class="fas fa-paper-plane me-2"></i>Send Message
+                            </button>
+                            <button type="reset" class="aca-contact-reset-button">
+                                <i class="fas fa-eraser me-2"></i>Clear Form
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+        <!-- Location Section -->
+        <section class="aca-contact-location-section py-5">
+            <div class="container">
+                <h3 class="aca-section-title fade-in">Our Location</h3>
+                <div class="aca-contact-location-content">
+                    <div class="aca-contact-location-info">
+                        <h3>Astana IT University</h3>
+                        <address class="aca-contact-location-address">
+                            <p><strong>Address:</strong></p>
+                            <p>55a Mangilik El Avenue</p>
+                            <p>Nur-Sultan 010000</p>
+                            <p>Kazakhstan</p>
+                        </address>
+                        
+                        <div class="aca-contact-contact-details">
+                            <h4>Contact Information</h4>
+                            <ul class="aca-contact-contact-list">
+                                <li><strong>University Phone:</strong> +7 (7172) 64-57-10</li>
+                                <li><strong>Website:</strong> <a href="https://astanait.edu.kz/about/" target="_blank">astanait.edu.kz</a></li>
+                                <li><strong>Project Email:</strong> 242394@astanait.edu.kz</li>
+                            </ul>
+                        </div>
+
+                        <div class="aca-contact-office-hours">
+                            <h4>Available Hours</h4>
+                            <p><strong>Contact Hours:</strong> 9:00 AM - 8:30 PM</p>
+                            <p><strong>Days:</strong> Monday - Friday</p>
+                            <p class="aca-contact-hours-note">*Messages sent outside these hours may not receive immediate response</p>
+                        </div>
+                    </div>
+                    
+                    <div class="aca-contact-map-container">
+                        <iframe 
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5011.927231957936!2d71.41194673602925!3d51.09067897693924!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x424585a605525605%3A0x4dff4a1973f7567e!2sAstana%20IT%20University!5e0!3m2!1sru!2skz!4v1758474027109!5m2!1sru!2skz" 
+                            class="aca-contact-location-map"
+                            allowfullscreen="" 
+                            loading="lazy" 
+                            referrerpolicy="no-referrer-when-downgrade">
+                        </iframe>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ Section -->
+        <section class="aca-contact-faq-section py-5">
+            <div class="container">
+                <h3 class="aca-section-title fade-in">Frequently Asked Questions</h3>
+                <div class="aca-contact-faq-grid">
+                    <div class="aca-contact-faq-item">
+                        <h4 class="aca-contact-faq-question">What is this project about?</h4>
+                        <p class="aca-contact-faq-answer">This is an educational project exploring various aspects of American culture, including cuisine, music, movies, sports, landmarks, and holidays.</p>
+                    </div>
+                    
+                    <div class="aca-contact-faq-item">
+                        <h4 class="aca-contact-faq-question">Can I contribute to this project?</h4>
+                        <p class="aca-contact-faq-answer">While this is currently a student assignment, we welcome feedback and suggestions to improve our content and presentation.</p>
+                    </div>
+                    
+                    <div class="aca-contact-faq-item">
+                        <h4 class="aca-contact-faq-question">How can I report an error?</h4>
+                        <p class="aca-contact-faq-answer">Please use the contact form above and select "Technical Issue" or "Website Feedback" as your subject to report any errors you encounter.</p>
+                    </div>
+                    
+                    <div class="aca-contact-faq-item">
+                        <h4 class="aca-contact-faq-question">Is this information verified?</h4>
+                        <p class="aca-contact-faq-answer">We strive for accuracy and use reputable sources. However, this is an educational project, so please verify important information independently.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="aca-footer">
+        <div class="container">
+            <div class="aca-footer-content">
+                <div class="aca-footer-section">
+                    <h3>American Cultural Association</h3>
+                    <p>Exploring the rich heritage and traditions of the United States. Our mission is to promote understanding and appreciation of American culture worldwide through education and cultural exchange.</p>
+                </div>
+                
+                <div class="aca-footer-section">
+                    <h3>Team Members</h3>
+                    <div class="aca-team-members">
+                        <a href="#ilyas" class="aca-team-member">Iliyas</a>
+                        <a href="#yerkebulan" class="aca-team-member">Yerkebulan</a>
+                        <a href="#radmir" class="aca-team-member">Radmir</a>
+                        <a href="#ramazan" class="aca-team-member">Ramazan</a>
+                    </div>
+                </div>
+                
+                <div class="aca-footer-section">
+                    <h3>Quick Links</h3>
+                    <ul class="aca-footer-links">
+                        <li><a href="home.html"><i class="fas fa-chevron-right"></i> Home</a></li>
+                        <li><a href="cuisine.html"><i class="fas fa-chevron-right"></i> Cuisine</a></li>
+                        <li><a href="music.html"><i class="fas fa-chevron-right"></i> Music</a></li>
+                        <li><a href="movies.html"><i class="fas fa-chevron-right"></i> Movies</a></li>
+                        <li><a href="sports.html"><i class="fas fa-chevron-right"></i> Sports</a></li>
+                        <li><a href="landmarks.html"><i class="fas fa-chevron-right"></i> Landmarks</a></li>
+                        <li><a href="holidays.html"><i class="fas fa-chevron-right"></i> Holidays</a></li>
+                        <li><a href="contact.html"><i class="fas fa-chevron-right"></i> Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="aca-footer-bottom">
+                <p>&copy; 2025 American Cultural Association. All rights reserved. Educational purposes only.</p>
+            </div>
+        </div>
+    </footer>
+
+    <div class="floating-buttons">
+        <button id="adminAccessBtn" class="floating-btn" style="background: linear-gradient(135deg, #28a745, #20c997);">
+            <i class="fas fa-shield-alt me-2"></i>Admin Mode
+        </button>
+        <button id="openPopupBtn" class="floating-btn">
+            <i class="fas fa-envelope me-2"></i>Subscribe
+        </button>
+        <button id="themeToggleBtn" class="floating-btn">
+            <i class="fas fa-moon me-2"></i>Dark Mode
+        </button>
+    </div>
+
+    <div id="popupForm" class="popup-overlay">
+        <div class="popup-content">
+            <span class="close-btn">&times;</span>
+            <h3>Subscribe to Our Newsletter</h3>
+            <form id="popupSubscribeForm">
+                <div class="mb-3">
+                    <label for="popupName" class="form-label">Name</label>
+                    <input type="text" class="form-control form-control-custom" id="popupName" placeholder="Enter your name" required>
+                </div>
+                <div class="mb-3">
+                    <label for="popupEmail" class="form-label">Email</label>
+                    <input type="email" class="form-control form-control-custom" id="popupEmail" placeholder="Enter your email" required>
+                </div>
+                <button type="submit" class="btn btn-custom w-100">Subscribe Now</button>
+            </form>
+        </div>
+    </div>
+
+    <div id="notificationPanel" class="notification-panel">
+        <div class="notification-header">
+            <h5>Notifications</h5>
+            <div class="notification-actions">
+                <button id="markAllRead" class="btn btn-sm btn-outline-primary">
+                    <i class="fas fa-check-double"></i> Mark all as read
+                </button>
+                <button id="closeNotifications" class="btn btn-sm btn-close"></button>
+            </div>
+        </div>
+        <div class="notification-list" id="notificationList">
+        </div>
+        <div class="notification-footer">
+            <small class="text-muted">American Cultural Association Notifications</small>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
+    <script src="admin-panel.js"></script>
+    
+    <script>
+        function toggleMember(element) {
+            const allMembers = document.querySelectorAll('.aca-contact-team-member');
+            allMembers.forEach(member => {
+                if (member !== element) {
+                    member.classList.remove('active');
+                }
+            });
+            
+            element.classList.toggle('active');
+        }
+        
+        document.addEventListener('click', function(event) {
+            if (!event.target.closest('.aca-contact-team-member')) {
+                const allMembers = document.querySelectorAll('.aca-contact-team-member');
+                allMembers.forEach(member => {
+                    member.classList.remove('active');
+                });
+            }
+        });
+
+        $(document).ready(function() {
+            $('#contactForm').on('submit', function(e) {
+                e.preventDefault();
+                
+                const $submitBtn = $(this).find('button[type="submit"]');
+                const originalText = $submitBtn.html();
+                
+                $submitBtn.prop('disabled', true)
+                    .html('<span class="spinner-border spinner-border-sm me-2" role="status" aria-hidden="true"></span>Sending...');
+                
+                setTimeout(() => {
+                    showNotification('Thank you for your message! We\'ll get back to you soon.', 'success');
+                    $submitBtn.prop('disabled', false).html(originalText);
+                    $(this).trigger('reset');
+                }, 2000);
+            });
+        });
+    </script>
+</body>
+</html>

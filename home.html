@@ -1,0 +1,623 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>American Cultural Association</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="scrollProgressBar" class="scroll-progress-bar"></div>
+    <nav class="navbar navbar-expand-lg navbar-dark navbar-custom sticky-top">
+        <div class="container">
+            <a class="navbar-brand-custom" href="home.html">
+                <img class="aca-logo-img" src="images/logoACA.webp" alt="ACA Logo">
+                <div>
+                    <h1 class="mb-0">American Cultural</h1>
+                    <p class="mb-0 opacity-8">Association</p>
+                </div>
+            </a>
+            
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                    <li tabindex="0" class="nav-item"><a class="nav-link nav-link-custom active" href="home.html">Home</a></li>
+                    <li tabindex="0" class="nav-item"><a class="nav-link nav-link-custom" href="cuisine.html">Cuisine</a></li>
+                    <li tabindex="0" class="nav-item"><a class="nav-link nav-link-custom" href="music.html">Music</a></li>
+                    <li tabindex="0" class="nav-item"><a class="nav-link nav-link-custom" href="movies.html">Movies</a></li>
+                    <li tabindex="0" class="nav-item"><a class="nav-link nav-link-custom" href="sports.html">Sports</a></li>
+                    <li tabindex="0" class="nav-item"><a class="nav-link nav-link-custom" href="landmarks.html">Landmarks</a></li>
+                    <li tabindex="0" class="nav-item"><a class="nav-link nav-link-custom" href="holidays.html">Holidays</a></li>
+                    <li tabindex="0" class="nav-item"><a class="nav-link nav-link-custom" href="contact.html">Contact</a></li>
+                </ul>
+                <img src="images/logoAITU.jpg" alt="University Logo" class="aca-university-logo ms-3">
+                <button id="notificationBell" class="btn notification-bell-btn position-relative">
+                    <i class="fas fa-bell"></i>
+                    <span id="notificationCount" class="notification-badge">0</span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+
+
+    <section class="aca-hero">
+        <div class="container">
+            <div class="aca-hero-content fade-in">
+                <h2>Welcome to the American Cultural Association</h2>
+                <p>Discover the rich tapestry of American culture through its cuisine, music, cinema, sports, landmarks, and traditions.</p>
+                <div class="aca-tagline">Celebrating the Rich Tapestry of American Heritage</div>
+                <div id="timeGreeting" class="aca-greeting fade-in" style="font-size: 1.4rem; margin: 10px 0;"></div>
+                <div id="date-time-block" style="font-size: 1.2rem; font-weight: 500; margin-top: 20px;"></div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-5 bg-light">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <div class="card card-custom fade-in">
+                        <div class="card-body card-body-custom">
+                            <h4 class="card-title-custom text-center mb-4">Search American Culture</h4>
+                            <div class="search-container">
+                                <div class="input-group">
+                                    <input type="text" id="cultureSearch" class="form-control form-control-custom" 
+                                        placeholder="Search categories...">
+                                    <button class="btn btn-custom" type="button">
+                                        <i class="fas fa-search"></i>
+                                    </button>
+                                </div>
+                                <div id="searchSuggestions" class="search-suggestions"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section class="py-5 bg-light">
+        <div class="container">
+            <h3 class="aca-section-title fade-in">American Culture Gallery</h3>
+            <div id="cultureCarousel" class="carousel slide carousel-custom" data-bs-ride="carousel">
+                <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#cultureCarousel" data-bs-slide-to="0" class="active"></button>
+                    <button type="button" data-bs-target="#cultureCarousel" data-bs-slide-to="1"></button>
+                    <button type="button" data-bs-target="#cultureCarousel" data-bs-slide-to="2"></button>
+                    <button type="button" data-bs-target="#cultureCarousel" data-bs-slide-to="3"></button>
+                    <button type="button" data-bs-target="#cultureCarousel" data-bs-slide-to="4"></button>
+                    <button type="button" data-bs-target="#cultureCarousel" data-bs-slide-to="5"></button>
+                    <button type="button" data-bs-target="#cultureCarousel" data-bs-slide-to="6"></button>
+                    <button type="button" data-bs-target="#cultureCarousel" data-bs-slide-to="7"></button>
+                    <button type="button" data-bs-target="#cultureCarousel" data-bs-slide-to="8"></button>
+                </div>
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img src="images/Cuisine Image.webp" class="d-block w-100" alt="American Cuisine">
+                        <div class="carousel-caption d-none d-md-block">
+                            <h5>American Cuisine</h5>
+                            <p>Diverse flavors from across the nation</p>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="images/Music.webp" class="d-block w-100" alt="American Music">
+                        <div class="carousel-caption d-none d-md-block">
+                            <h5>American Music</h5>
+                            <p>From jazz to hip-hop</p>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="images/Hollywood-sign.jpg" class="d-block w-100" alt="American Cinema">
+                        <div class="carousel-caption d-none d-md-block">
+                            <h5>American Cinema</h5>
+                            <p>Hollywood and beyond</p>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="images/Sport.webp" class="d-block w-100" alt="American Sports">
+                        <div class="carousel-caption d-none d-md-block">
+                            <h5>American Sports</h5>
+                            <p>Passion and competition</p>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="images/grand-canyon.jpg" class="d-block w-100" alt="American Landmarks">
+                        <div class="carousel-caption d-none d-md-block">
+                            <h5>American Landmarks</h5>
+                            <p>Iconic monuments and natural wonders</p>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="images/Holidays.webp" class="d-block w-100" alt="American Holidays">
+                        <div class="carousel-caption d-none d-md-block">
+                            <h5>American Holidays</h5>
+                            <p>Traditions and celebrations</p>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="images/white-house.jpg" class="d-block w-100" alt="White House">
+                        <div class="carousel-caption d-none d-md-block">
+                            <h5>White House</h5>
+                            <p>Symbol of American democracy</p>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="images/statue-liberty.jpg" class="d-block w-100" alt="Statue of Liberty">
+                        <div class="carousel-caption d-none d-md-block">
+                            <h5>Statue of Liberty</h5>
+                            <p>Icon of freedom</p>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="images/new-york.jpg" class="d-block w-100" alt="New York City">
+                        <div class="carousel-caption d-none d-md-block">
+                            <h5>New York City</h5>
+                            <p>The city that never sleeps</p>
+                        </div>
+                    </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#cultureCarousel" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon"></span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#cultureCarousel" data-bs-slide="next">
+                    <span class="carousel-control-next-icon"></span>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-5">
+        <div class="container">
+            <h3 class="aca-section-title fade-in">Interactive American Gallery</h3>
+            <div class="text-center mb-4">
+                <div class="btn-group" role="group">
+                    <button type="button" class="btn btn-outline-custom active" data-filter="all">All</button>
+                    <button type="button" class="btn btn-outline-custom" data-filter="landmark">Landmarks</button>
+                    <button type="button" class="btn btn-outline-custom" data-filter="nature">Nature</button>
+                    <button type="button" class="btn btn-outline-custom" data-filter="entertainment">Entertainment</button>
+                </div>
+            </div>
+            <div class="row g-3" id="interactiveGallery"></div>
+            <div class="text-center mt-4">
+                <button id="shuffleGallery" class="btn btn-custom">
+                    <i class="fas fa-random me-2"></i>Shuffle Gallery
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <section class="aca-categories">
+        <div class="container">
+            <h3 class="aca-section-title fade-in">Explore American Culture</h3>
+            <div class="row g-4">
+                <div class="col-lg-4 col-md-6">
+                    <div class="card card-custom fade-in">
+                        <img src="images/Music.webp" class="card-img-top card-img-custom" alt="American Music">
+                        <div class="card-body card-body-custom">
+                            <h5 class="card-title-custom">American Music</h5>
+                            <p class="card-text-custom">From jazz and blues to country and hip-hop—experience America's musical legacy and its global influence.</p>
+                            <a href="music.html" class="btn btn-custom">Explore Music</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="card card-custom fade-in">
+                        <img src="images/Cuisine Image.webp" class="card-img-top card-img-custom" alt="American Cuisine">
+                        <div class="card-body card-body-custom">
+                            <h5 class="card-title-custom">American Cuisine</h5>
+                            <p class="card-text-custom">From classic burgers to regional specialties—discover the diverse flavors that define American food culture.</p>
+                            <a href="cuisine.html" class="btn btn-custom">Explore Cuisine</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="card card-custom fade-in">
+                        <img src="images/Sport.webp" class="card-img-top card-img-custom" alt="American Sports">
+                        <div class="card-body card-body-custom">
+                            <h5 class="card-title-custom">American Sports</h5>
+                            <p class="card-text-custom">From baseball to basketball—discover America's passion for sports, competition, and team spirit.</p>
+                            <a href="sports.html" class="btn btn-custom">Explore Sports</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="card card-custom fade-in">
+                        <img src="images/Hollywood-sign.jpg" class="card-img-top card-img-custom" alt="American Cinema">
+                        <div class="card-body card-body-custom">
+                            <h5 class="card-title-custom">American Cinema</h5>
+                            <p class="card-text-custom">Hollywood and beyond—explore the films and directors that shaped global cinema and storytelling.</p>
+                            <a href="movies.html" class="btn btn-custom">Explore Cinema</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="card card-custom fade-in">
+                        <img src="images/grand-canyon.jpg" class="card-img-top card-img-custom" alt="American Landmarks">
+                        <div class="card-body card-body-custom">
+                            <h5 class="card-title-custom">American Landmarks</h5>
+                            <p class="card-text-custom">Iconic monuments and natural wonders—explore America's most famous landmarks and their histories.</p>
+                            <a href="landmarks.html" class="btn btn-custom">Explore Landmarks</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="card card-custom fade-in">
+                        <img src="images/Holidays.webp" class="card-img-top card-img-custom" alt="American Holidays">
+                        <div class="card-body card-body-custom">
+                            <h5 class="card-title-custom">American Holidays</h5>
+                            <p class="card-text-custom">National celebrations and traditions—discover how America marks special occasions throughout the year.</p>
+                            <a href="holidays.html" class="btn btn-custom">Explore Holidays</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-5 bg-light">
+        <div class="container">
+            <h3 class="aca-section-title fade-in">American Cultural Facts</h3>
+            <div class="row g-4" id="culturalFactsContainer"></div>
+            <div class="text-center mt-4">
+                <button id="refreshFacts" class="btn btn-custom">
+                    <i class="fas fa-sync-alt me-2"></i>Show New Facts
+                </button>
+            </div>
+        </div>
+    </section>
+    <section class="py-5" style="background: linear-gradient(135deg, var(--primary-blue) 0%, var(--dark-blue) 100%); color: white;">
+        <div class="container">
+            <h3 class="aca-section-title fade-in text-white">American Culture in Numbers</h3>
+            <div class="row text-center">
+                <div class="col-md-3">
+                    <div class="counter-item fade-in">
+                        <div class="counter-number" data-target="50">0</div>
+                        <div class="counter-label">Cultural Categories</div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="counter-item fade-in">
+                        <div class="counter-number" data-target="100">0</div>
+                        <div class="counter-label">Famous Landmarks</div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="counter-item fade-in">
+                        <div class="counter-number" data-target="75">0</div>
+                        <div class="counter-label">Music Genres</div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="counter-item fade-in">
+                        <div class="counter-number" data-target="25">0</div>
+                        <div class="counter-label">Team Members</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="py-5">
+        <div class="container">
+            <h3 class="aca-section-title fade-in">American Cultural Insights</h3>
+            <div class="row g-4">
+                <div class="col-lg-6">
+                    <div class="card card-custom fade-in h-100">
+                        <div class="card-body card-body-custom">
+                            <h4 class="card-title-custom">Cultural Diversity</h4>
+                            <div id="culturalDiversityContent" class="read-more-content">
+                                American culture is a melting pot of traditions from around the world, creating a unique and diverse society that values innovation, individual expression, and cultural exchange. This diversity is reflected in everything from cuisine to music, making America a truly multicultural nation where different traditions blend together to create something new and unique. The influence of immigrant communities has shaped American culture in profound ways, contributing to its dynamic and ever-evolving nature.
+                            </div>
+                            <button class="btn btn-outline-custom btn-sm mt-3 read-more-btn" 
+                                    data-target="culturalDiversityContent"
+                                    data-more="Read More ▼"
+                                    data-less="Read Less ▲">
+                                Read More ▼
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="card card-custom fade-in h-100">
+                        <div class="card-body card-body-custom">
+                            <h4 class="card-title-custom">Innovation & Progress</h4>
+                            <div id="innovationContent" class="read-more-content">
+                                The United States has been at the forefront of technological innovation, entertainment, and scientific discovery, shaping global culture through its achievements and pioneering spirit. From the invention of the internet to groundbreaking advances in medicine and space exploration, American innovation has transformed the modern world. This culture of entrepreneurship and risk-taking continues to drive progress in fields like technology, biotechnology, and renewable energy, cementing America's role as a global leader in innovation and scientific advancement.
+                            </div>
+                            <button class="btn btn-outline-custom btn-sm mt-3 read-more-btn" 
+                                    data-target="innovationContent"
+                                    data-more="Read More ▼"
+                                    data-less="Read Less ▲">
+                                Read More ▼
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-5">
+        <div class="container">
+            <h3 class="aca-section-title">Rate American Culture</h3>
+            <div class="text-center">
+                <div class="rating-stars mb-3">
+                    <span class="star" data-rating="1">★</span>
+                    <span class="star" data-rating="2">★</span>
+                    <span class="star" data-rating="3">★</span>
+                    <span class="star" data-rating="4">★</span>
+                    <span class="star" data-rating="5">★</span>
+                </div>
+                <p id="rating-text">Click to rate American culture!</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="aca-about">
+        <div class="container">
+            <div class="aca-about-content fade-in">
+                <div class="aca-about-text">
+                    <h3>About American Cultural Association</h3>
+                    <p>The American Cultural Association is dedicated to exploring and sharing the diverse cultural heritage of the United States. From the bustling cities to the quiet countryside, American culture reflects both unity and diversity.</p>
+                    <p>Our mission is to educate people worldwide about American traditions, values, and way of life through various cultural aspects including cuisine, music, cinema, sports, landmarks, and holidays.</p>
+                    <a href="#" class="btn btn-custom">Learn More About Us</a>
+                </div>
+                <div class="aca-about-image">
+                    <img src="images/white-house.jpg" alt="About American Culture">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-5">
+        <div class="container">
+            <h3 class="aca-section-title fade-in">Join Our Cultural Newsletter</h3>
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <div class="card card-custom fade-in">
+                        <div class="card-body card-body-custom">
+                            <form id="mainNewsletterForm" class="row g-4">
+                                <div class="col-md-6">
+                                    <label for="newsletterName" class="form-label fw-semibold">First Name</label>
+                                    <input type="text" class="form-control form-control-custom" id="newsletterName" placeholder="Enter your first name" required>
+                                </div>
+                                <div class="col-md-6">
+                                    <label for="newsletterEmail" class="form-label fw-semibold">Email Address</label>
+                                    <input type="email" class="form-control form-control-custom" id="newsletterEmail" placeholder="Enter your email" required>
+                                </div>
+                                <div class="col-12">
+                                    <label for="newsletterInterest" class="form-label fw-semibold">Primary Interest</label>
+                                    <select class="form-select form-control-custom" id="newsletterInterest">
+                                        <option selected>Choose your interest...</option>
+                                        <option>American Cuisine</option>
+                                        <option>American Music</option>
+                                        <option>American Cinema</option>
+                                        <option>American Sports</option>
+                                        <option>American Landmarks</option>
+                                        <option>American Holidays</option>
+                                    </select>
+                                </div>
+                                <div class="col-12">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" id="newsletterAgree">
+                                        <label class="form-check-label" for="newsletterAgree">
+                                            I agree to receive monthly updates about American culture and events
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+                                        <button type="submit" class="btn btn-custom px-4">Subscribe Now</button>
+                                        <button type="reset" class="btn btn-outline-custom px-4">Clear Form</button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="aca-faq-section py-5">
+        <div class="container">
+            <h3 class="aca-section-title fade-in">Frequently Asked Questions</h3>
+            <div class="aca-accordion" id="faqAccordion">
+                <div class="aca-accordion-item fade-in">
+                    <button class="aca-accordion-header" id="faqHeading1">
+                        What is the purpose of the American Cultural Association?
+                        <span class="aca-accordion-icon">+</span>
+                    </button>
+                    <div class="aca-accordion-content" id="faqContent1">
+                        <p>The American Cultural Association is dedicated to exploring and sharing the diverse cultural heritage of the United States. Our mission is to educate people worldwide about American traditions, values, and way of life through various cultural aspects including cuisine, music, cinema, sports, landmarks, and holidays.</p>
+                    </div>
+                </div>
+                
+                <div class="aca-accordion-item fade-in">
+                    <button class="aca-accordion-header" id="faqHeading2">
+                        How can I learn more about American music?
+                        <span class="aca-accordion-icon">+</span>
+                    </button>
+                    <div class="aca-accordion-content" id="faqContent2">
+                        <p>You can explore our dedicated Music section which covers various American music genres from jazz and blues to country and hip-hop. We provide information about influential artists, historical context, and the evolution of American music over time.</p>
+                    </div>
+                </div>
+                
+                <div class="aca-accordion-item fade-in">
+                    <button class="aca-accordion-header" id="faqHeading3">
+                        What American holidays are covered on this website?
+                        <span class="aca-accordion-icon">+</span>
+                    </button>
+                    <div class="aca-accordion-content" id="faqContent3">
+                        <p>Our Holidays section covers major American celebrations including Independence Day, Thanksgiving, Memorial Day, Labor Day, and cultural events like Halloween and Christmas traditions in the United States. Each holiday page explains the history, traditions, and significance of these celebrations.</p>
+                    </div>
+                </div>
+                
+                <div class="aca-accordion-item fade-in">
+                    <button class="aca-accordion-header" id="faqHeading4">
+                        Can I contribute content to this website?
+                        <span class="aca-accordion-icon">+</span>
+                    </button>
+                    <div class="aca-accordion-content" id="faqContent4">
+                        <p>Currently, the website is maintained by our team of students. However, if you have suggestions or would like to share your knowledge about American culture, please feel free to contact us through our Contact page. We appreciate feedback and ideas for improving our content.</p>
+                    </div>
+                </div>
+                
+                <div class="aca-accordion-item fade-in">
+                    <button class="aca-accordion-header" id="faqHeading5">
+                        Are there any membership opportunities?
+                        <span class="aca-accordion-icon">+</span>
+                    </button>
+                    <div class="aca-accordion-content" id="faqContent5">
+                        <p>At this time, we don't offer formal membership programs. However, you can stay connected with us by subscribing to our newsletter for regular updates about American culture, events, and new content additions to our website.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="aca-team-section">
+        <div class="container">
+            <h3 class="aca-section-title fade-in">La Crimson Mafia Team</h3>
+            <div class="aca-team-grid">
+                <a href="contact.html#ilyas" class="aca-team-card fade-in">
+                    <img src="images/iliyas.jpg" alt="Iliyas" class="aca-team-image">
+                    <div class="aca-team-content">
+                        <h4>Iliyas</h4>
+                        <div class="aca-team-role">Project Lead & Developer</div>
+                        <p>Responsible for music and movie pages development and project coordination.</p>
+                        <div class="aca-team-email">241705@astanait.edu.kz</div>
+                    </div>
+                </a>
+                
+                <a href="contact.html#yerkebulan" class="aca-team-card fade-in">
+                    <img src="images/Erkosh.jpg" alt="Yerkebulan Rakhymbay" class="aca-team-image">
+                    <div class="aca-team-content">
+                        <h4>Yerkebulan Rakhymbay</h4>
+                        <div class="aca-team-role">Frontend Developer</div>
+                        <p>Focused on cuisine and homepage pages with modern web technologies.</p>
+                        <div class="aca-team-email">240065@astanait.edu.kz</div>
+                    </div>
+                </a>
+                
+                <a href="contact.html#radmir" class="aca-team-card fade-in">
+                    <img src="images/Radik.jpg" alt="Radmir Toizhanov" class="aca-team-image">
+                    <div class="aca-team-content">
+                        <h4>Radmir Toizhanov</h4>
+                        <div class="aca-team-role">Content Developer</div>
+                        <p>Handled sports and holidays pages content creation and design.</p>
+                        <div class="aca-team-email">241561@astanait.edu.kz</div>
+                    </div>
+                </a>
+                
+                <a href="contact.html#ramazan" class="aca-team-card fade-in">
+                    <img src="images/Roma.jpg" alt="Ramazan Nagimov" class="aca-team-image">
+                    <div class="aca-team-content">
+                        <h4>Ramazan Nagimov</h4>
+                        <div class="aca-team-role">UI/UX Developer</div>
+                        <p>Responsible for landmarks and contact pages design and user experience.</p>
+                        <div class="aca-team-email">242394@astanait.edu.kz</div>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <footer class="aca-footer">
+        <div class="container">
+            <div class="aca-footer-content">
+                <div class="aca-footer-section">
+                    <h3>American Cultural Association</h3>
+                    <p>Exploring the rich heritage and traditions of the United States. Our mission is to promote understanding and appreciation of American culture worldwide through education and cultural exchange.</p>
+                </div>
+                
+                <div class="aca-footer-section">
+                    <h3>Team Members</h3>
+                    <div class="aca-team-members">
+                        <a href="contact.html#ilyas" class="aca-team-member">Iliyas</a>
+                        <a href="contact.html#yerkebulan" class="aca-team-member">Yerkebulan</a>
+                        <a href="contact.html#radmir" class="aca-team-member">Radmir</a>
+                        <a href="contact.html#ramazan" class="aca-team-member">Ramazan</a>
+                    </div>
+                </div>
+                
+                <div class="aca-footer-section">
+                    <h3>Quick Links</h3>
+                    <ul class="aca-footer-links">
+                        <li><a href="home.html"><i class="fas fa-chevron-right"></i> Home</a></li>
+                        <li><a href="cuisine.html"><i class="fas fa-chevron-right"></i> Cuisine</a></li>
+                        <li><a href="music.html"><i class="fas fa-chevron-right"></i> Music</a></li>
+                        <li><a href="movies.html"><i class="fas fa-chevron-right"></i> Movies</a></li>
+                        <li><a href="sports.html"><i class="fas fa-chevron-right"></i> Sports</a></li>
+                        <li><a href="landmarks.html"><i class="fas fa-chevron-right"></i> Landmarks</a></li>
+                        <li><a href="holidays.html"><i class="fas fa-chevron-right"></i> Holidays</a></li>
+                        <li><a href="contact.html"><i class="fas fa-chevron-right"></i> Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="aca-footer-bottom">
+                <p>&copy; 2025 American Cultural Association. All rights reserved. Educational purposes only.</p>
+            </div>
+        </div>
+    </footer>
+
+    <div class="floating-buttons">
+        <button id="adminAccessBtn" class="floating-btn" style="background: linear-gradient(135deg, #28a745, #20c997);">
+            <i class="fas fa-shield-alt me-2"></i>Admin Mode
+        </button>
+        <button id="openPopupBtn" class="floating-btn">
+            <i class="fas fa-envelope me-2"></i>Subscribe
+        </button>
+        <button id="themeToggleBtn" class="floating-btn">
+            <i class="fas fa-moon me-2"></i>Dark Mode
+        </button>
+    </div>
+
+    <div id="popupForm" class="popup-overlay">
+        <div class="popup-content">
+            <span class="close-btn">&times;</span>
+            <h3>Subscribe to Our Newsletter</h3>
+            <form id="popupSubscribeForm">
+                <div class="mb-3">
+                    <label for="popupName" class="form-label">Name</label>
+                    <input type="text" class="form-control form-control-custom" id="popupName" placeholder="Enter your name" required>
+                </div>
+                <div class="mb-3">
+                    <label for="popupEmail" class="form-label">Email</label>
+                    <input type="email" class="form-control form-control-custom" id="popupEmail" placeholder="Enter your email" required>
+                </div>
+                <button type="submit" class="btn btn-custom w-100">Subscribe Now</button>
+            </form>
+        </div>
+    </div>
+
+    <div id="notificationPanel" class="notification-panel">
+        <div class="notification-header">
+            <h5> Notifications</h5>
+            <div class="notification-actions">
+                <button id="markAllRead" class="btn btn-sm btn-outline-primary">
+                    <i class="fas fa-check-double"></i> Mark all as read
+                </button>
+                <button id="closeNotifications" class="btn btn-sm btn-close"></button>
+            </div>
+        </div>
+        <div class="notification-list" id="notificationList">
+        </div>
+        <div class="notification-footer">
+            <small class="text-muted">American Cultural Association Notifications</small>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
+    <script src="admin-panel.js"></script>
+</body>
+</html>

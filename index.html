@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - American Cultural Association</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="admin-panel.css">
+</head>
+<body>
+    <div class="login-container">
+        <div class="login-hero">
+            <div class="login-hero-content">
+                <h1>Welcome to American Cultural Association</h1>
+                <p>Discover the rich tapestry of American culture through its cuisine, music, cinema, sports, landmarks, and traditions. Join our community to explore and celebrate American heritage.</p>
+            </div>
+        </div>
+        
+        <div class="login-form-section" id="loginFormSection">
+            <div class="aca-logo">
+                <img class="aca-logo-img" src="images/logoACA.webp" alt="ACA Logo">
+                <div>
+                    <h3 style="margin: 0; color: var(--primary-blue);">American Cultural</h3>
+                    <p style="margin: 0; font-size: 0.9rem; color: var(--text-light);">Association</p>
+                </div>
+            </div>
+
+            <div class="form-tabs">
+                <button class="tab-btn active" data-tab="login">Log In</button>
+                <button class="tab-btn" data-tab="register">Register</button>
+            </div>
+
+            <div class="success-message" id="successMessage">
+                <i class="fas fa-check-circle"></i> Registration successful! You can now log in.
+            </div>
+
+            <div id="welcome"></div>
+
+            <div class="form-content active" id="loginForm">
+                <form id="loginFormElement">
+                    <div class="form-group">
+                        <label class="form-label">Email</label>
+                        <input type="email" class="form-control-custom" id="loginEmail" placeholder="Enter your email" required>
+                        <span class="error" id="loginEmailError"></span>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label class="form-label">Password</label>
+                        <input type="password" class="form-control-custom" id="loginPassword" placeholder="Enter your password" required>
+                        <span class="error" id="loginPasswordError"></span>
+                    </div>
+                    
+                    <button type="submit" class="btn-custom">Log In</button>
+                </form>
+            </div>
+
+            <div class="form-content" id="registerForm">
+                <form id="registerFormElement">
+                    <div class="form-group">
+                        <label class="form-label">Full Name</label>
+                        <input type="text" class="form-control-custom" id="registerName" placeholder="Enter your full name" required>
+                        <span class="error" id="registerNameError"></span>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label class="form-label">Email</label>
+                        <input type="email" class="form-control-custom" id="registerEmail" placeholder="Enter your email" required>
+                        <span class="error" id="registerEmailError"></span>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label class="form-label">Password</label>
+                        <input type="password" class="form-control-custom" id="registerPassword" placeholder="Create a password (min. 6 characters)" required>
+                        <span class="error" id="registerPasswordError"></span>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label class="form-label">Confirm Password</label>
+                        <input type="password" class="form-control-custom" id="registerConfirmPassword" placeholder="Confirm your password" required>
+                        <span class="error" id="registerConfirmError"></span>
+                    </div>
+                    
+                    <button type="submit" class="btn-custom">Create Account</button>
+                </form>
+            </div>
+
+            <div class="guest-section">
+                <p class="guest-text">Or continue as guest to explore our content</p>
+                <button class="btn-outline-custom" id="guestBtn">
+                    <i class="fas fa-user"></i> Continue as Guest
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <audio id="loginSound" src="https://cdn.pixabay.com/download/audio/2021/09/01/audio_9d3cc6e67b.mp3?filename=success-1-6297.mp3"></audio>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
+    <script src="admin-panel.js"></script>
+</body>
+</html>
